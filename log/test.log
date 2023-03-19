@@ -1,0 +1,29 @@
+2023-03-19 14:49:27 [main] INFO  Main:11 - Program starts!
+2023-03-19 14:49:46 [main] INFO  Main:11 - Program starts!
+2023-03-19 14:50:14 [main] INFO  Main:11 - Program starts!
+2023-03-20 00:18:50 [main] ERROR Main:46 - Failed to initialize resources
+java.io.FileNotFoundException: equipment_types.json (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.io.FileInputStream.open(FileInputStream.java:219) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:158) ~[?:?]
+	at com.fasterxml.jackson.core.JsonFactory.createParser(JsonFactory.java:1029) ~[jackson-core-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3514) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at restraunt.RestaurantSimulation.getFacilityTypes(RestaurantSimulation.java:32) ~[classes/:?]
+	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:43) [classes/:?]
+	at restraunt.Main.main(Main.java:13) [classes/:?]
+2023-03-20 00:20:14 [main] ERROR Main:46 - Failed to initialize resources
+com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.util.ArrayList<restraunt.resources.KitchenFacilityType>` from Object value (token `JsonToken.START_OBJECT`)
+ at [Source: (File); line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1741) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1515) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1462) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.handleNonArray(CollectionDeserializer.java:392) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:252) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3514) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at restraunt.RestaurantSimulation.getFacilityTypes(RestaurantSimulation.java:32) ~[classes/:?]
+	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:43) [classes/:?]
+	at restraunt.Main.main(Main.java:13) [classes/:?]
