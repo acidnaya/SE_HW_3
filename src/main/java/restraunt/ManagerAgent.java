@@ -1,9 +1,12 @@
 package restraunt;
-import jade.core.Agent;
 
-public class ManagerAgent extends Agent {
-    @Override
+public class ManagerAgent {
+    CookAgent cook;
+
     protected void setup() {
+
         System.out.println("Hello, I am a manager!");
+        cook = new CookAgent(1, "John", true);
+        cook.setup();
     }
 }

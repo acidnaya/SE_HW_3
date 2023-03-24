@@ -13,9 +13,11 @@ public class CookAgent {
     @JsonProperty("cook_id")
     int ID;
     @JsonProperty("cook_name")
-    String name;
+    String cname;
     @JsonProperty("cook_active")
     boolean active;
 
-
+    protected void setup() {
+        System.out.println("Hello, I am a #" + ID + " cook!");
+    }
 }

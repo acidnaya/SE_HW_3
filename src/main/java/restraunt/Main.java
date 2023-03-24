@@ -9,8 +9,8 @@ public class Main {
 
         // logger.info("Program starts!");
 
-        RestaurantSimulation rs = new RestaurantSimulation();
-        rs.getResources();
+         RestaurantSimulation rs = new RestaurantSimulation();
+         rs.getResources();
         //MenuDish itemWithOwner = new ObjectMapper().readValue(json, MenuDish.class);
     }
 }
