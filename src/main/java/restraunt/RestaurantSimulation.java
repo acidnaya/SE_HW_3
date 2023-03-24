@@ -18,6 +18,7 @@ public class RestaurantSimulation {
     List<MenuDish> dishes;
     List<CookAgent> cooks;
     List<ProductType> productTypes;
+    List<Product> productItems;
     List<KitchenFacilityType> facilityTypes;
 
     //List
@@ -43,6 +44,11 @@ public class RestaurantSimulation {
         productTypes = objectMapper.readValue(file, new TypeReference<>() {});
     }
 
+    public void getProductItems() throws IOException {
+        File file = new File(Configurations.productsPath);
+        productItems = objectMapper.readValue(file, new TypeReference<>() {});
+    }
+
     public String serialize(Object o) throws JsonProcessingException {
         String serialized = objectMapper.writeValueAsString(o);
         return serialized;
@@ -53,7 +59,9 @@ public class RestaurantSimulation {
             getCooks();
             getFacilityTypes();
             getProductTypes();
+            getProductItems();
             getDishes();
+            System.out.println(serialize(productItems));
             System.out.println(serialize(dishes));
             System.out.println(serialize(productTypes));
         } catch (Exception e) {
