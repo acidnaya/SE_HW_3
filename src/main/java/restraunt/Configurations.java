@@ -1,5 +1,7 @@
 package restraunt;
 
+import java.util.Date;
+
 public class Configurations {
     public static String cardsPath = "inputs/cards.json";
     public static String cooksPath = "inputs/cooks.json";
@@ -10,4 +12,8 @@ public class Configurations {
     public static String productTypesPath = "inputs/product_types.json";
     public static String productsPath = "inputs/products.json";
     public static String customersPath = "inputs/customers_orders.json";
+    public static String startTime = "2023-02-28T10:00:00";
+    public static String endTime = "2023-02-28T23:00:00";
+    public static final String timezone = "Europe/Moscow";
+    public static int speed = 10000;
 }

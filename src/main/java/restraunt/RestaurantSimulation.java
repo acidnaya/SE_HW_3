@@ -75,7 +75,8 @@ public class RestaurantSimulation {
             getDishes();
             getFacilities();
             getCustomers();
-            System.out.println(serialize(customers));
+            System.out.println(customers.get(0).started.toString());
+            System.out.println(customers.get(0).ended.toString());
 //            System.out.println(serialize(facilities));
 //            System.out.println(serialize(dishes));
 //            System.out.println(serialize(productTypes));
