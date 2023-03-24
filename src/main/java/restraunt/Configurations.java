@@ -9,5 +9,5 @@ public class Configurations {
     public static String operationTypesPath = "inputs/operation_types.json";
     public static String productTypesPath = "inputs/product_types.json";
     public static String productsPath = "inputs/products.json";
-
+    public static String customersPath = "inputs/customers_orders.json";
 }
