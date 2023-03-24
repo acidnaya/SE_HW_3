@@ -19,6 +19,7 @@ public class RestaurantSimulation {
     List<CookAgent> cooks;
     List<ProductType> productTypes;
     List<KitchenFacilityType> facilityTypes;
+    List<KitchenFacility> facilities;
 
     //List
     ObjectMapper objectMapper = new ObjectMapper();
@@ -31,6 +32,11 @@ public class RestaurantSimulation {
     public void getFacilityTypes() throws IOException {
         File file = new File(Configurations.facilityTypesPath); // мб выкинуть отсюда
         facilityTypes = objectMapper.readValue(file, new TypeReference<>() {});
+    }
+
+    public void getFacilities() throws IOException {
+        File file = new File(Configurations.facilityPath); // мб выкинуть отсюда
+        facilities = objectMapper.readValue(file, new TypeReference<>() {});
     }
 
     public void getDishes() throws IOException {
@@ -54,8 +60,8 @@ public class RestaurantSimulation {
             getFacilityTypes();
             getProductTypes();
             getDishes();
-            System.out.println(serialize(dishes));
-            System.out.println(serialize(productTypes));
+            getFacilities();
+            System.out.println(serialize(facilities));
         } catch (Exception e) {
             logger.error("Failed to initialize resources", e);
         }
