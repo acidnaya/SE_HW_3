@@ -20,6 +20,7 @@ public class RestaurantSimulation {
     List<ProductType> productTypes;
     List<Product> productItems;
     List<KitchenFacilityType> facilityTypes;
+    List<KitchenFacility> facilities;
 
     //List
     ObjectMapper objectMapper = new ObjectMapper();
@@ -32,6 +33,11 @@ public class RestaurantSimulation {
     public void getFacilityTypes() throws IOException {
         File file = new File(Configurations.facilityTypesPath); // мб выкинуть отсюда
         facilityTypes = objectMapper.readValue(file, new TypeReference<>() {});
+    }
+
+    public void getFacilities() throws IOException {
+        File file = new File(Configurations.facilityPath); // мб выкинуть отсюда
+        facilities = objectMapper.readValue(file, new TypeReference<>() {});
     }
 
     public void getDishes() throws IOException {
@@ -61,7 +67,8 @@ public class RestaurantSimulation {
             getProductTypes();
             getProductItems();
             getDishes();
-            System.out.println(serialize(productItems));
+            getFacilities();
+            System.out.println(serialize(facilities));
             System.out.println(serialize(dishes));
             System.out.println(serialize(productTypes));
         } catch (Exception e) {
