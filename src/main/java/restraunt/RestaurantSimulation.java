@@ -24,9 +24,15 @@ public class RestaurantSimulation {
     List<KitchenFacilityType> facilityTypes;
     List<KitchenFacility> facilities;
 
+    List<Customer> customers;
+
     //List
     ObjectMapper objectMapper = new ObjectMapper();
 
+    public void getCustomers() throws IOException {
+        File file = new File(Configurations.customersPath); // мб выкинуть отсюда
+        customers = objectMapper.readValue(file, new TypeReference<>() {});
+    }
     public void getCooks() throws IOException {
         File file = new File(Configurations.cooksPath); // мб выкинуть отсюда
         cooks = objectMapper.readValue(file, new TypeReference<>() {});
@@ -89,6 +95,8 @@ public class RestaurantSimulation {
             logger.error("Failed to initialize resources", e);
         }
     }
+
+    // сделать проверку после оформления каждого заказа, на наличие продуктов и исключить из меню то че нельзя приготовить
 
     public void start() {
         ManagerAgent manager = new ManagerAgent();
