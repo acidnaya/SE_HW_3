@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.*;
-import restraunt.resources.*;
+import restraunt.resources.basic.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,6 +19,8 @@ public class RestaurantSimulation {
     List<CookAgent> cooks;
     List<ProductType> productTypes;
     List<Product> productItems;
+    List<DishCard> dishCards;
+    List<KitchenOperationType> operations;
     List<KitchenFacilityType> facilityTypes;
     List<KitchenFacility> facilities;
 
@@ -55,6 +57,16 @@ public class RestaurantSimulation {
         productItems = objectMapper.readValue(file, new TypeReference<>() {});
     }
 
+    public void getDishCards() throws IOException {
+        File file = new File(Configurations.cardsPath);
+        dishCards = objectMapper.readValue(file, new TypeReference<>() {});
+
+    }
+    public void getOperations() throws IOException {
+        File file = new File(Configurations.operationTypesPath);
+        operations = objectMapper.readValue(file, new TypeReference<>() {});
+    }
+
     public String serialize(Object o) throws JsonProcessingException {
         String serialized = objectMapper.writeValueAsString(o);
         return serialized;
@@ -62,15 +74,17 @@ public class RestaurantSimulation {
 
     public void getResources() {
         try {
-            getCooks();
-            getFacilityTypes();
-            getProductTypes();
-            getProductItems();
-            getDishes();
-            getFacilities();
-            System.out.println(serialize(facilities));
-            System.out.println(serialize(dishes));
-            System.out.println(serialize(productTypes));
+            getDishCards();
+           // getCooks();
+          //  getFacilityTypes();
+          //  getProductTypes();
+          //  getProductItems();
+         //   getDishes();
+         //   getFacilities();
+            System.out.println(serialize(dishCards));
+         //   System.out.println(serialize(facilities));
+         //   System.out.println(serialize(dishes));
+         //   System.out.println(serialize(productTypes));
         } catch (Exception e) {
             logger.error("Failed to initialize resources", e);
         }

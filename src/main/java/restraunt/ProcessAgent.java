@@ -1,6 +1,6 @@
 package restraunt;
 
-import restraunt.resources.*;
+import restraunt.resources.basic.KitchenOperationType;
 
 import java.util.Date;
 import java.util.List;
@@ -11,5 +11,5 @@ public class ProcessAgent {
     Date started;
     Date ended;
     boolean active;
-    List<KitchenOperation> operations;
+    List<KitchenOperationType> operations;
 }
