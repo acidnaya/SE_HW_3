@@ -80,14 +80,14 @@ public class RestaurantSimulation {
 
     public void getResources() {
         try {
-            getDishCards();
+         //   getDishCards();
            // getCooks();
           //  getFacilityTypes();
           //  getProductTypes();
-          //  getProductItems();
+            getProductItems();
          //   getDishes();
          //   getFacilities();
-            System.out.println(serialize(dishCards));
+            System.out.println(serialize(productItems));
          //   System.out.println(serialize(facilities));
          //   System.out.println(serialize(dishes));
          //   System.out.println(serialize(productTypes));
