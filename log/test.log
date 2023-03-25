@@ -12,7 +12,7 @@ java.io.FileNotFoundException: equipment_types.json (No such file or directory)
 	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:43) [classes/:?]
 	at restraunt.Main.main(Main.java:13) [classes/:?]
 2023-03-20 00:20:14 [main] ERROR Main:46 - Failed to initialize resources
-com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.util.ArrayList<restraunt.resources.KitchenFacilityType>` from Object value (token `JsonToken.START_OBJECT`)
+com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.util.ArrayList<restraunt.resources.basic.KitchenFacilityType>` from Object value (token `JsonToken.START_OBJECT`)
  at [Source: (File); line: 1, column: 1]
 	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1741) ~[jackson-databind-2.13.3.jar:2.13.3]
@@ -85,8 +85,8 @@ com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized f
 	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:41) [classes/:?]
 	at restraunt.Main.main(Main.java:13) [classes/:?]
 2023-03-24 21:09:14 [main] ERROR Main:59 - Failed to initialize resources
-com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "equip_type" (class restraunt.resources.KitchenFacility), not marked as ignorable (3 known properties: "equip_type_id", "equip_name", "equip_active"])
- at [Source: (File); line: 3, column: 18] (through reference chain: java.util.ArrayList[0]->restraunt.resources.KitchenFacility["equip_type"])
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "equip_type" (class restraunt.resources.basic.KitchenFacility), not marked as ignorable (3 known properties: "equip_type_id", "equip_name", "equip_active"])
+ at [Source: (File); line: 3, column: 18] (through reference chain: java.util.ArrayList[0]->restraunt.resources.basic.KitchenFacility["equip_type"])
 	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023) ~[jackson-databind-2.13.3.jar:2.13.3]
@@ -104,8 +104,8 @@ com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized f
 	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:56) [classes/:?]
 	at restraunt.Main.main(Main.java:14) [classes/:?]
 2023-03-24 22:36:27 [main] ERROR Main:68 - Failed to initialize resources
-com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "prod_item_id" (class restraunt.resources.ProductType), not marked as ignorable (3 known properties: "prod_type_id", "prod_is_food", "prod_type_name"])
- at [Source: (File); line: 3, column: 22] (through reference chain: java.util.ArrayList[0]->restraunt.resources.ProductType["prod_item_id"])
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "prod_item_id" (class restraunt.resources.basic.ProductType), not marked as ignorable (3 known properties: "prod_type_id", "prod_is_food", "prod_type_name"])
+ at [Source: (File); line: 3, column: 22] (through reference chain: java.util.ArrayList[0]->restraunt.resources.basic.ProductType["prod_item_id"])
 	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023) ~[jackson-databind-2.13.3.jar:2.13.3]
@@ -123,8 +123,8 @@ com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized f
 	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:62) [classes/:?]
 	at restraunt.Main.main(Main.java:14) [classes/:?]
 2023-03-24 22:44:39 [main] ERROR Main:68 - Failed to initialize resources
-com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "prod_item_id" (class restraunt.resources.ProductType), not marked as ignorable (3 known properties: "prod_type_id", "prod_is_food", "prod_type_name"])
- at [Source: (File); line: 3, column: 22] (through reference chain: java.util.ArrayList[0]->restraunt.resources.ProductType["prod_item_id"])
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "prod_item_id" (class restraunt.resources.basic.ProductType), not marked as ignorable (3 known properties: "prod_type_id", "prod_is_food", "prod_type_name"])
+ at [Source: (File); line: 3, column: 22] (through reference chain: java.util.ArrayList[0]->restraunt.resources.basic.ProductType["prod_item_id"])
 	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023) ~[jackson-databind-2.13.3.jar:2.13.3]
@@ -142,8 +142,8 @@ com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized f
 	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:62) [classes/:?]
 	at restraunt.Main.main(Main.java:14) [classes/:?]
 2023-03-24 22:49:37 [main] ERROR Main:68 - Failed to initialize resources
-com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "prod_item_type " (class restraunt.resources.Product), not marked as ignorable (9 known properties: "prod_item_delivered", "prod_item_cost", "prod_item_valid_until", "prod_item_unit", "prod_item_company", "prod_item_type", "prod_item_id", "prod_item_name", "prod_item_quantity"])
- at [Source: (File); line: 4, column: 24] (through reference chain: java.util.ArrayList[0]->restraunt.resources.Product["prod_item_type "])
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "prod_item_type " (class restraunt.resources.basic.Product), not marked as ignorable (9 known properties: "prod_item_delivered", "prod_item_cost", "prod_item_valid_until", "prod_item_unit", "prod_item_company", "prod_item_type", "prod_item_id", "prod_item_name", "prod_item_quantity"])
+ at [Source: (File); line: 4, column: 24] (through reference chain: java.util.ArrayList[0]->restraunt.resources.basic.Product["prod_item_type "])
 	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023) ~[jackson-databind-2.13.3.jar:2.13.3]
@@ -161,8 +161,8 @@ com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized f
 	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:62) [classes/:?]
 	at restraunt.Main.main(Main.java:14) [classes/:?]
 2023-03-24 22:53:24 [main] ERROR Main:68 - Failed to initialize resources
-com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field " prod_item_quantity" (class restraunt.resources.Product), not marked as ignorable (9 known properties: "prod_item_delivered", "prod_item_cost", "prod_item_valid_until", "prod_item_unit", "prod_item_company", "prod_item_type", "prod_item_id", "prod_item_name", "prod_item_quantity"])
- at [Source: (File); line: 63, column: 32] (through reference chain: java.util.ArrayList[5]->restraunt.resources.Product[" prod_item_quantity"])
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field " prod_item_quantity" (class restraunt.resources.basic.Product), not marked as ignorable (9 known properties: "prod_item_delivered", "prod_item_cost", "prod_item_valid_until", "prod_item_unit", "prod_item_company", "prod_item_type", "prod_item_id", "prod_item_name", "prod_item_quantity"])
+ at [Source: (File); line: 63, column: 32] (through reference chain: java.util.ArrayList[5]->restraunt.resources.basic.Product[" prod_item_quantity"])
 	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023) ~[jackson-databind-2.13.3.jar:2.13.3]
@@ -180,8 +180,8 @@ com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized f
 	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:62) [classes/:?]
 	at restraunt.Main.main(Main.java:14) [classes/:?]
 2023-03-24 22:53:40 [main] ERROR Main:68 - Failed to initialize resources
-com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field " prod_item_cost" (class restraunt.resources.Product), not marked as ignorable (9 known properties: "prod_item_delivered", "prod_item_cost", "prod_item_valid_until", "prod_item_unit", "prod_item_company", "prod_item_type", "prod_item_id", "prod_item_name", "prod_item_quantity"])
- at [Source: (File); line: 64, column: 28] (through reference chain: java.util.ArrayList[5]->restraunt.resources.Product[" prod_item_cost"])
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field " prod_item_cost" (class restraunt.resources.basic.Product), not marked as ignorable (9 known properties: "prod_item_delivered", "prod_item_cost", "prod_item_valid_until", "prod_item_unit", "prod_item_company", "prod_item_type", "prod_item_id", "prod_item_name", "prod_item_quantity"])
+ at [Source: (File); line: 64, column: 28] (through reference chain: java.util.ArrayList[5]->restraunt.resources.basic.Product[" prod_item_cost"])
 	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023) ~[jackson-databind-2.13.3.jar:2.13.3]
@@ -199,8 +199,8 @@ com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized f
 	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:62) [classes/:?]
 	at restraunt.Main.main(Main.java:14) [classes/:?]
 2023-03-24 22:53:54 [main] ERROR Main:68 - Failed to initialize resources
-com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "cons_delivered" (class restraunt.resources.Product), not marked as ignorable (9 known properties: "prod_item_delivered", "prod_item_cost", "prod_item_valid_until", "prod_item_unit", "prod_item_company", "prod_item_type", "prod_item_id", "prod_item_name", "prod_item_quantity"])
- at [Source: (File); line: 65, column: 24] (through reference chain: java.util.ArrayList[5]->restraunt.resources.Product["cons_delivered"])
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "cons_delivered" (class restraunt.resources.basic.Product), not marked as ignorable (9 known properties: "prod_item_delivered", "prod_item_cost", "prod_item_valid_until", "prod_item_unit", "prod_item_company", "prod_item_type", "prod_item_id", "prod_item_name", "prod_item_quantity"])
+ at [Source: (File); line: 65, column: 24] (through reference chain: java.util.ArrayList[5]->restraunt.resources.basic.Product["cons_delivered"])
 	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023) ~[jackson-databind-2.13.3.jar:2.13.3]
@@ -218,8 +218,8 @@ com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized f
 	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:62) [classes/:?]
 	at restraunt.Main.main(Main.java:14) [classes/:?]
 2023-03-24 22:55:07 [main] ERROR Main:68 - Failed to initialize resources
-com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "prod_item _id" (class restraunt.resources.Product), not marked as ignorable (9 known properties: "prod_item_delivered", "prod_item_cost", "prod_item_valid_until", "prod_item_unit", "prod_item_company", "prod_item_type", "prod_item_id", "prod_item_name", "prod_item_quantity"])
- at [Source: (File); line: 69, column: 25] (through reference chain: java.util.ArrayList[6]->restraunt.resources.Product["prod_item _id"])
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "prod_item _id" (class restraunt.resources.basic.Product), not marked as ignorable (9 known properties: "prod_item_delivered", "prod_item_cost", "prod_item_valid_until", "prod_item_unit", "prod_item_company", "prod_item_type", "prod_item_id", "prod_item_name", "prod_item_quantity"])
+ at [Source: (File); line: 69, column: 25] (through reference chain: java.util.ArrayList[6]->restraunt.resources.basic.Product["prod_item _id"])
 	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023) ~[jackson-databind-2.13.3.jar:2.13.3]
@@ -237,8 +237,8 @@ com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized f
 	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:62) [classes/:?]
 	at restraunt.Main.main(Main.java:14) [classes/:?]
 2023-03-24 22:55:47 [main] ERROR Main:68 - Failed to initialize resources
-com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "prod_item_type " (class restraunt.resources.Product), not marked as ignorable (9 known properties: "prod_item_delivered", "prod_item_cost", "prod_item_valid_until", "prod_item_unit", "prod_item_company", "prod_item_type", "prod_item_id", "prod_item_name", "prod_item_quantity"])
- at [Source: (File); line: 70, column: 26] (through reference chain: java.util.ArrayList[6]->restraunt.resources.Product["prod_item_type "])
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "prod_item_type " (class restraunt.resources.basic.Product), not marked as ignorable (9 known properties: "prod_item_delivered", "prod_item_cost", "prod_item_valid_until", "prod_item_unit", "prod_item_company", "prod_item_type", "prod_item_id", "prod_item_name", "prod_item_quantity"])
+ at [Source: (File); line: 70, column: 26] (through reference chain: java.util.ArrayList[6]->restraunt.resources.basic.Product["prod_item_type "])
 	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023) ~[jackson-databind-2.13.3.jar:2.13.3]
@@ -255,15 +255,19 @@ com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized f
 	at restraunt.RestaurantSimulation.getProductItems(RestaurantSimulation.java:49) ~[classes/:?]
 	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:62) [classes/:?]
 	at restraunt.Main.main(Main.java:14) [classes/:?]
-2023-03-25 01:23:12 [main] ERROR Main:84 - Failed to initialize resources
-com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "2023-02-28T10:12:37": expected format "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
- at [Source: (File); line: 4, column: 22] (through reference chain: java.util.ArrayList[0]->restraunt.Customer["vis_ord_started"])
-	at com.fasterxml.jackson.databind.exc.InvalidFormatException.from(InvalidFormatException.java:67) ~[jackson-databind-2.13.3.jar:2.13.3]
-	at com.fasterxml.jackson.databind.DeserializationContext.weirdStringException(DeserializationContext.java:1991) ~[jackson-databind-2.13.3.jar:2.13.3]
-	at com.fasterxml.jackson.databind.DeserializationContext.handleWeirdStringValue(DeserializationContext.java:1219) ~[jackson-databind-2.13.3.jar:2.13.3]
-	at com.fasterxml.jackson.databind.deser.std.DateDeserializers$DateBasedDeserializer._parseDate(DateDeserializers.java:195) ~[jackson-databind-2.13.3.jar:2.13.3]
-	at com.fasterxml.jackson.databind.deser.std.DateDeserializers$DateDeserializer.deserialize(DateDeserializers.java:303) ~[jackson-databind-2.13.3.jar:2.13.3]
-	at com.fasterxml.jackson.databind.deser.std.DateDeserializers$DateDeserializer.deserialize(DateDeserializers.java:281) ~[jackson-databind-2.13.3.jar:2.13.3]
+2023-03-24 23:44:35 [main] ERROR Main:83 - Failed to initialize resources
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "oper_type" (class restraunt.resources.basic.KitchenOperationType), not marked as ignorable (0 known properties: ])
+ at [Source: (File); line: 9, column: 20] (through reference chain: java.util.ArrayList[0]->restraunt.resources.basic.DishCard["operations"]->java.util.ArrayList[0]->restraunt.resources.basic.KitchenOperationType["oper_type"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1700) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1678) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:319) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:313) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.3.jar:2.13.3]
@@ -273,6 +277,244 @@ com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize va
 	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674) ~[jackson-databind-2.13.3.jar:2.13.3]
 	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3514) ~[jackson-databind-2.13.3.jar:2.13.3]
-	at restraunt.RestaurantSimulation.getCustomers(RestaurantSimulation.java:32) ~[classes/:?]
+	at restraunt.RestaurantSimulation.getDishCards(RestaurantSimulation.java:61) ~[classes/:?]
 	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:77) [classes/:?]
+	at restraunt.Main.main(Main.java:14) [classes/:?]
+2023-03-24 23:53:01 [main] ERROR Main:88 - Failed to initialize resources
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "oper_type" (class restraunt.resources.basic.KitchenOperationType), not marked as ignorable (2 known properties: "oper_type_id", "oper_type_name"])
+ at [Source: (File); line: 9, column: 20] (through reference chain: java.util.ArrayList[0]->restraunt.resources.basic.DishCard["operations"]->java.util.ArrayList[0]->restraunt.resources.basic.KitchenOperationType["oper_type"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1700) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1678) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:319) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:313) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3514) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at restraunt.RestaurantSimulation.getDishCards(RestaurantSimulation.java:62) ~[classes/:?]
+	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:82) [classes/:?]
+	at restraunt.Main.main(Main.java:14) [classes/:?]
+2023-03-25 00:01:38 [main] ERROR Main:88 - Failed to initialize resources
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "oper_async_point" (class restraunt.resources.basic.KitchenOperationType), not marked as ignorable (2 known properties: "oper_type_id", "oper_type_name"])
+ at [Source: (File); line: 10, column: 26] (through reference chain: java.util.ArrayList[0]->restraunt.resources.basic.DishCard["operations"]->java.util.ArrayList[0]->restraunt.resources.basic.KitchenOperationType["oper_async_point"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1700) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1678) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:319) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:313) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3514) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at restraunt.RestaurantSimulation.getDishCards(RestaurantSimulation.java:62) ~[classes/:?]
+	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:82) [classes/:?]
+	at restraunt.Main.main(Main.java:14) [classes/:?]
+2023-03-25 09:00:26 [main] ERROR Main:88 - Failed to initialize resources
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "oper_products" (class restraunt.resources.basic.KitchenOperationType), not marked as ignorable (2 known properties: "oper_type_id", "oper_type_name"])
+ at [Source: (File); line: 10, column: 23] (through reference chain: java.util.ArrayList[0]->restraunt.resources.basic.DishCard["operations"]->java.util.ArrayList[0]->restraunt.resources.basic.KitchenOperationType["oper_products"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1700) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1678) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:319) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:313) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3514) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at restraunt.RestaurantSimulation.getDishCards(RestaurantSimulation.java:62) ~[classes/:?]
+	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:82) [classes/:?]
+	at restraunt.Main.main(Main.java:14) [classes/:?]
+2023-03-25 09:29:21 [main] ERROR Main:91 - Failed to initialize resources
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Conflicting getter definitions for property "equip_type": restraunt.resources.basic.DishCard#getEquipment() vs restraunt.resources.basic.DishCard#getOperations()
+ at [Source: (File); line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:62) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerFactory.buildBeanDeserializer(BeanDeserializerFactory.java:268) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerFactory.createBeanDeserializer(BeanDeserializerFactory.java:150) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createDeserializer2(DeserializerCache.java:415) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createDeserializer(DeserializerCache.java:350) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createAndCache2(DeserializerCache.java:264) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createAndCacheValueDeserializer(DeserializerCache.java:244) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache.findValueDeserializer(DeserializerCache.java:142) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.DeserializationContext.findContextualValueDeserializer(DeserializationContext.java:609) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.createContextual(CollectionDeserializer.java:188) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.createContextual(CollectionDeserializer.java:28) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleSecondaryContextualization(DeserializationContext.java:856) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.DeserializationContext.findRootValueDeserializer(DeserializationContext.java:647) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper._findRootDeserializer(ObjectMapper.java:4805) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4675) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3514) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at restraunt.RestaurantSimulation.getDishCards(RestaurantSimulation.java:63) ~[classes/:?]
+	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:78) [classes/:?]
+	at restraunt.Main.main(Main.java:14) [classes/:?]
+Caused by: java.lang.IllegalArgumentException: Conflicting getter definitions for property "equip_type": restraunt.resources.basic.DishCard#getEquipment() vs restraunt.resources.basic.DishCard#getOperations()
+	at com.fasterxml.jackson.databind.introspect.POJOPropertyBuilder.getGetter(POJOPropertyBuilder.java:449) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.introspect.BeanPropertyDefinition.getAccessor(BeanPropertyDefinition.java:188) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.introspect.POJOPropertyBuilder._getSetterInfo(POJOPropertyBuilder.java:265) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.introspect.POJOPropertyBuilder.getMetadata(POJOPropertyBuilder.java:242) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.introspect.POJOPropertiesCollector._anyIndexed(POJOPropertiesCollector.java:1238) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.introspect.POJOPropertiesCollector._sortProperties(POJOPropertiesCollector.java:1140) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.introspect.POJOPropertiesCollector.collectAll(POJOPropertiesCollector.java:470) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.introspect.POJOPropertiesCollector.getPropertyMap(POJOPropertiesCollector.java:386) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.introspect.POJOPropertiesCollector.getProperties(POJOPropertiesCollector.java:233) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.introspect.BasicBeanDescription._properties(BasicBeanDescription.java:164) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.introspect.BasicBeanDescription.findProperties(BasicBeanDescription.java:239) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._findCreatorsFromProperties(BasicDeserializerFactory.java:328) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._constructDefaultValueInstantiator(BasicDeserializerFactory.java:272) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory.findValueInstantiator(BasicDeserializerFactory.java:223) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerFactory.buildBeanDeserializer(BeanDeserializerFactory.java:261) ~[jackson-databind-2.13.3.jar:2.13.3]
+	... 17 more
+2023-03-25 09:33:18 [main] ERROR Main:91 - Failed to initialize resources
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "prod_type" (class restraunt.resources.basic.ProductType), not marked as ignorable (3 known properties: "prod_type_id", "prod_is_food", "prod_type_name"])
+ at [Source: (File); line: 12, column: 22] (through reference chain: java.util.ArrayList[0]->restraunt.resources.basic.DishCard["operations"]->java.util.ArrayList[0]->restraunt.resources.additional.KitchenOperation["oper_products"]->java.util.ArrayList[0]->restraunt.resources.basic.ProductType["prod_type"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1700) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1678) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:319) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.impl.FieldProperty.deserializeAndSet(FieldProperty.java:138) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:313) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:313) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3514) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at restraunt.RestaurantSimulation.getDishCards(RestaurantSimulation.java:63) ~[classes/:?]
+	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:78) [classes/:?]
+	at restraunt.Main.main(Main.java:14) [classes/:?]
+2023-03-25 09:34:04 [main] ERROR Main:91 - Failed to initialize resources
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "prod_type" (class restraunt.resources.basic.Product), not marked as ignorable (9 known properties: "prod_item_delivered", "prod_item_cost", "prod_item_valid_until", "prod_item_unit", "prod_item_company", "prod_item_type", "prod_item_id", "prod_item_name", "prod_item_quantity"])
+ at [Source: (File); line: 12, column: 22] (through reference chain: java.util.ArrayList[0]->restraunt.resources.basic.DishCard["operations"]->java.util.ArrayList[0]->restraunt.resources.additional.KitchenOperation["oper_products"]->java.util.ArrayList[0]->restraunt.resources.basic.Product["prod_type"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1700) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1678) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:319) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.impl.FieldProperty.deserializeAndSet(FieldProperty.java:138) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:313) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:313) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3514) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at restraunt.RestaurantSimulation.getDishCards(RestaurantSimulation.java:63) ~[classes/:?]
+	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:78) [classes/:?]
+	at restraunt.Main.main(Main.java:14) [classes/:?]
+2023-03-25 13:12:53 [main] ERROR Main:91 - Failed to initialize resources
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "prod_type_id" (class restraunt.resources.additional.OperationProduct), not marked as ignorable (2 known properties: "prod_type", "prod_quantity"])
+ at [Source: (File); line: 21, column: 27] (through reference chain: java.util.ArrayList[0]->restraunt.resources.basic.DishCard["operations"]->java.util.ArrayList[0]->restraunt.resources.additional.KitchenOperation["oper_products"]->java.util.ArrayList[2]->restraunt.resources.additional.OperationProduct["prod_type_id"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1700) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1678) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:319) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.impl.FieldProperty.deserializeAndSet(FieldProperty.java:138) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:313) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:313) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3514) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at restraunt.RestaurantSimulation.getDishCards(RestaurantSimulation.java:63) ~[classes/:?]
+	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:78) [classes/:?]
+	at restraunt.Main.main(Main.java:14) [classes/:?]
+2023-03-25 13:15:44 [main] ERROR Main:90 - Failed to initialize resources
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "prod_type_id" (class restraunt.resources.additional.OperationProduct), not marked as ignorable (2 known properties: "prod_type", "prod_quantity"])
+ at [Source: (File); line: 21, column: 27] (through reference chain: java.util.ArrayList[0]->restraunt.resources.basic.DishCard["operations"]->java.util.ArrayList[0]->restraunt.resources.additional.KitchenOperation["oper_products"]->java.util.ArrayList[2]->restraunt.resources.additional.OperationProduct["prod_type_id"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2023) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1700) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1678) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:319) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.impl.FieldProperty.deserializeAndSet(FieldProperty.java:138) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:313) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:313) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3514) ~[jackson-databind-2.13.3.jar:2.13.3]
+	at restraunt.RestaurantSimulation.getDishCards(RestaurantSimulation.java:63) ~[classes/:?]
+	at restraunt.RestaurantSimulation.getResources(RestaurantSimulation.java:78) [classes/:?]
 	at restraunt.Main.main(Main.java:14) [classes/:?]
