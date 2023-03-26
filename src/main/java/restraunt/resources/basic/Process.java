@@ -1,11 +1,11 @@
-package restraunt;
+package restraunt.resources.basic;
 
 import restraunt.resources.basic.KitchenOperationType;
 
 import java.util.Date;
 import java.util.List;
 
-public class ProcessAgent {
+public class Process {
     int ID;
     int dish;
     Date started;
