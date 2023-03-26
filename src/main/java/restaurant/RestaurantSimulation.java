@@ -69,8 +69,7 @@ public class RestaurantSimulation {
 
     private void getFacilityTypesJSON() throws IOException {
         File file = new File(Config.facilityTypesPath);
-        List<KitchenFacilityType> facilityTypes = objectMapper.readValue(file, new TypeReference<>() {
-        });
+        List<KitchenFacilityType> facilityTypes = objectMapper.readValue(file, new TypeReference<>() {});
     }
 
     private void getFacilitiesJSON() throws IOException {

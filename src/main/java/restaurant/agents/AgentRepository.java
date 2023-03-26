@@ -46,17 +46,4 @@ public class AgentRepository {
             log.debug("Agent removed from repository: {}", agent.getName());
         }
     }
-
-    /**
-     * Находит всех агентов искомого типа
-     *
-     * @param type тип искомого агента
-     * @return список всех рабочих агентов
-     */
-    public static synchronized <T extends Agent<?>> List<T> findByType(Class<T> type) {
-        return AGENTS.stream()
-                .filter(agent -> agent.getClass() == type)
-                .map(agent -> (T) agent)
-                .toList();
-    }
 }

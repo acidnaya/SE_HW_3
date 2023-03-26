@@ -16,12 +16,6 @@ public class KitchenOperation implements Comparable<KitchenOperation> {
     @JsonProperty("oper_products")
     List<OperationProduct> products;
 
-//    @Override
-//    public int compareTo(Object o) {
-//        var op = (KitchenOperation)o;
-//        return point - op.point;
-//    }
-
     @Override
     public int compareTo(KitchenOperation o) {
         return point - o.point;

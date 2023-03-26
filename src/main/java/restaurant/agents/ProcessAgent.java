@@ -19,10 +19,9 @@ public class ProcessAgent extends Agent<Message> {
     volatile private static int counter = 0;
     private int ID;
     volatile private int ready = 0;
-    int dish;
-    OrderAgent parent;
-
-    Process proc = new Process();
+    final int dish;
+    final OrderAgent parent;
+    final Process proc = new Process();
 
     List<KitchenOperation> operations;
 

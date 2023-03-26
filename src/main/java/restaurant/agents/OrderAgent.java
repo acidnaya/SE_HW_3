@@ -5,13 +5,10 @@ import restaurant.messages.EndMessage;
 import restaurant.messages.Message;
 import restaurant.messages.ReserveMessage;
 import restaurant.resources.basic.Order;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class OrderAgent extends Agent<Message> {
-    CustomerAgent customer;
-    List<ProcessAgent> processes = new ArrayList<>();
+    private final CustomerAgent customer;
     volatile private int counter;
 
     public OrderAgent(CustomerAgent c, List<Order> order) {
@@ -20,7 +17,6 @@ public class OrderAgent extends Agent<Message> {
         for (var orderPart: order) {
             Main.restaurant.getWarehouse().registerMessage(new ReserveMessage());
             var p = new ProcessAgent(orderPart.getDish(), this);
-            processes.add(p);
             start(p);
         }
     }
