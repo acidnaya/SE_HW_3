@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.*;
+import lombok.extern.slf4j.Slf4j;
 import restraunt.agents.*;
 import restraunt.resources.basic.*;
 
@@ -12,11 +13,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static restraunt.Main.logger; // хуйня или не хуйня?
-
 @NoArgsConstructor
+@Slf4j
 public class RestaurantSimulation {
-    // public static AgentRepository repository;
     private List<Agent> localRepository;
     public Time time;
     @Getter
@@ -32,7 +31,6 @@ public class RestaurantSimulation {
     private List<MenuDish> dishes;
     private List<ProductType> productTypes;
     private List<Product> productItems;
-
     @Getter
     public List<DishCard> dishCards;
     private List<KitchenOperationType> operations;
@@ -108,7 +106,7 @@ public class RestaurantSimulation {
             getOperationsJSON();
             getCustomersJSON();
         } catch (Exception e) {
-            logger.error("Failed to initialize resources", e);
+            log.error("Failed to initialize resources", e);
         }
     }
 
@@ -121,15 +119,15 @@ public class RestaurantSimulation {
         Agent.start(manager);
         Agent.start(cook);
         for (var agent: localRepository) {
-            agent.start(agent);
+            Agent.start(agent);
         }
-        try {
-            for (int i = 0; i < 10; ++i) {
-                System.out.println("time: " + time.timeToString(time.getCurrentTime()));
-                Thread.sleep(500);
-            }
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            for (int i = 0; i < 10; ++i) {
+//                System.out.println("time: " + time.timeToString(time.getCurrentTime()));
+//                Thread.sleep(500);
+//            }
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
     }
 }

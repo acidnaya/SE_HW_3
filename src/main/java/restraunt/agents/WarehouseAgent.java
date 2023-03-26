@@ -1,9 +1,11 @@
 package restraunt.agents;
 
+import lombok.extern.slf4j.Slf4j;
 import restraunt.messages.*;
 import restraunt.resources.basic.*;
 import java.util.*;
 
+@Slf4j
 public class WarehouseAgent extends Agent {
     private List<Product> products;
     private List<ProductType> productTypes;
@@ -14,9 +16,6 @@ public class WarehouseAgent extends Agent {
         for(var product: products) {
             typedProducts.merge(product.getType(), product.getQuantity(), (prev, q) -> prev + q);
         }
-//        typedProducts.forEach((key, value) -> {
-//            System.out.println("Key = " + key + ", Value = " + value);
-//        });
     }
 
     private void reserveProduct(int productType, double quantity) {
@@ -27,7 +26,7 @@ public class WarehouseAgent extends Agent {
     @Override
     protected void proceed(Message message) throws Exception {
         if (message instanceof ReserveMessage m) {
-            System.out.println(getName() + " reserve products" );
+            log.info("[{}] Warehouse reserved products", Time.now);
         }
     }
 }

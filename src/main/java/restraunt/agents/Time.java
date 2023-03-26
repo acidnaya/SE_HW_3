@@ -11,7 +11,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Time extends Agent {
-    public DateFormat formatter;
+    public static String now = "";
+    private DateFormat formatter;
     @Getter
     private volatile long currentTime;
     private long startTime;
@@ -58,6 +59,7 @@ public class Time extends Agent {
         while (currentTime < endTime) {
             var time = new Date().getTime();
             currentTime = startTime + (time - realTime) * speed;
+            now = timeToString(currentTime);
         }
         AgentRepository.remove(this);
         AgentRepository.stopAll();

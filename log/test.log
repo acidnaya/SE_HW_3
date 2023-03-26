@@ -323,3 +323,180 @@ java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" becaus
 2023-03-26 18:41:00 [Thread-3] INFO  Agent:67 - Agent CookAgent-0 was interrupted
 2023-03-26 18:41:00 [Thread-1] INFO  Agent:67 - Agent WarehouseAgent-0 was interrupted
 2023-03-26 18:41:00 [Thread-2] INFO  Agent:67 - Agent ManagerAgent-0 was interrupted
+2023-03-26 19:36:17 [Thread-8] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+2023-03-26 19:36:17 [Thread-4] INFO  Agent:67 - Agent CustomerAgent-0 was interrupted
+2023-03-26 19:36:17 [Thread-12] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+2023-03-26 19:36:17 [Thread-5] INFO  Agent:67 - Agent CustomerAgent-1 was interrupted
+2023-03-26 19:36:21 [Thread-3] INFO  Agent:67 - Agent CookAgent-0 was interrupted
+2023-03-26 19:36:21 [Thread-1] INFO  Agent:67 - Agent WarehouseAgent-0 was interrupted
+2023-03-26 19:36:21 [Thread-2] INFO  Agent:67 - Agent ManagerAgent-0 was interrupted
+2023-03-26 19:38:11 [Thread-8] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+2023-03-26 19:38:11 [Thread-4] INFO  Agent:67 - Agent CustomerAgent-0 was interrupted
+2023-03-26 19:38:12 [Thread-12] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+2023-03-26 19:38:12 [Thread-5] INFO  Agent:67 - Agent CustomerAgent-1 was interrupted
+2023-03-26 19:38:16 [Thread-2] INFO  Agent:67 - Agent ManagerAgent-0 was interrupted
+2023-03-26 19:38:16 [Thread-3] INFO  Agent:67 - Agent CookAgent-0 was interrupted
+2023-03-26 19:38:16 [Thread-1] INFO  Agent:67 - Agent WarehouseAgent-0 was interrupted
+2023-03-26 19:40:52 [Thread-8] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+2023-03-26 19:40:52 [Thread-4] INFO  Agent:67 - Agent CustomerAgent-0 was interrupted
+2023-03-26 19:40:52 [Thread-12] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+2023-03-26 19:40:52 [Thread-5] INFO  Agent:67 - Agent CustomerAgent-1 was interrupted
+2023-03-26 19:40:56 [Thread-1] INFO  Agent:67 - Agent WarehouseAgent-0 was interrupted
+2023-03-26 19:40:56 [Thread-3] INFO  Agent:67 - Agent CookAgent-0 was interrupted
+2023-03-26 19:40:56 [Thread-2] INFO  Agent:67 - Agent ManagerAgent-0 was interrupted
+2023-03-26 19:41:18 [Thread-8] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+2023-03-26 19:41:18 [Thread-4] INFO  Agent:67 - Agent CustomerAgent-0 was interrupted
+2023-03-26 19:41:18 [Thread-12] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+2023-03-26 19:41:18 [Thread-5] INFO  Agent:67 - Agent CustomerAgent-1 was interrupted
+2023-03-26 19:41:23 [Thread-2] INFO  Agent:67 - Agent ManagerAgent-0 was interrupted
+2023-03-26 19:41:23 [Thread-3] INFO  Agent:67 - Agent CookAgent-0 was interrupted
+2023-03-26 19:41:23 [Thread-1] INFO  Agent:67 - Agent WarehouseAgent-0 was interrupted
+2023-03-26 19:42:34 [Thread-4] INFO  CustomerAgent:29 - Customer  Visitor123 made an order.
+2023-03-26 19:42:34 [Thread-8] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+2023-03-26 19:42:34 [Thread-4] INFO  Agent:67 - Agent CustomerAgent-0 was interrupted
+2023-03-26 19:42:34 [Thread-5] INFO  CustomerAgent:29 - Customer  Visitor124 made an order.
+2023-03-26 19:42:34 [Thread-12] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+2023-03-26 19:42:34 [Thread-5] INFO  Agent:67 - Agent CustomerAgent-1 was interrupted
+2023-03-26 19:42:39 [Thread-1] INFO  Agent:67 - Agent WarehouseAgent-0 was interrupted
+2023-03-26 19:42:39 [Thread-3] INFO  Agent:67 - Agent CookAgent-0 was interrupted
+2023-03-26 19:42:39 [Thread-2] INFO  Agent:67 - Agent ManagerAgent-0 was interrupted
+2023-03-26 19:48:27 [Thread-4] INFO  CustomerAgent:28 - Customer  Visitor123 made an order
+2023-03-26 19:48:27 [Thread-6] INFO  FacilityAgent:22 - Facility DAZHENG LOOKYAMI reserved.
+2023-03-26 19:48:27 [Thread-6] INFO  CookAgent:19 - Cook Ivanov A. S. reserved.
+2023-03-26 19:48:27 [Thread-7] INFO  FacilityAgent:22 - Facility DAZHENG LOOKYAMI reserved.
+2023-03-26 19:48:27 [Thread-7] INFO  CookAgent:19 - Cook Ivanov A. S. reserved.
+2023-03-26 19:48:27 [Thread-8] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+2023-03-26 19:48:28 [Thread-4] INFO  Agent:67 - Agent CustomerAgent-0 was interrupted
+2023-03-26 19:48:28 [Thread-5] INFO  CustomerAgent:28 - Customer  Visitor124 made an order
+2023-03-26 19:48:28 [Thread-11] INFO  FacilityAgent:22 - Facility DAZHENG LOOKYAMI reserved.
+2023-03-26 19:48:28 [Thread-11] INFO  CookAgent:19 - Cook Ivanov A. S. reserved.
+2023-03-26 19:48:28 [Thread-12] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+2023-03-26 19:48:28 [Thread-5] INFO  Agent:67 - Agent CustomerAgent-1 was interrupted
+2023-03-26 19:48:32 [Thread-2] INFO  Agent:67 - Agent ManagerAgent-0 was interrupted
+2023-03-26 19:48:32 [Thread-3] INFO  Agent:67 - Agent CookAgent-0 was interrupted
+2023-03-26 19:48:32 [Thread-1] INFO  Agent:67 - Agent WarehouseAgent-0 was interrupted
+2023-03-26 19:51:45 [Thread-4] INFO  CustomerAgent:28 - Customer  Visitor123 made an order
+2023-03-26 19:51:45 [Thread-2] INFO  ManagerAgent:17 - Manager received CustomerAgent-0 order
+2023-03-26 19:51:45 [Thread-6] INFO  FacilityAgent:22 - Facility DAZHENG LOOKYAMI reserved.
+2023-03-26 19:51:45 [Thread-6] INFO  CookAgent:19 - Cook Ivanov A. S. reserved.
+2023-03-26 19:51:45 [Thread-7] INFO  FacilityAgent:22 - Facility DAZHENG LOOKYAMI reserved.
+2023-03-26 19:51:45 [Thread-7] INFO  CookAgent:19 - Cook Ivanov A. S. reserved.
+2023-03-26 19:51:45 [Thread-8] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+2023-03-26 19:51:45 [Thread-4] INFO  Agent:67 - Agent CustomerAgent-0 was interrupted
+2023-03-26 19:51:45 [Thread-5] INFO  CustomerAgent:28 - Customer  Visitor124 made an order
+2023-03-26 19:51:45 [Thread-2] INFO  ManagerAgent:17 - Manager received CustomerAgent-1 order
+2023-03-26 19:51:45 [Thread-11] INFO  FacilityAgent:22 - Facility DAZHENG LOOKYAMI reserved.
+2023-03-26 19:51:45 [Thread-11] INFO  CookAgent:19 - Cook Ivanov A. S. reserved.
+2023-03-26 19:51:45 [Thread-12] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+2023-03-26 19:51:45 [Thread-5] INFO  Agent:67 - Agent CustomerAgent-1 was interrupted
+2023-03-26 19:51:49 [Thread-2] INFO  Agent:67 - Agent ManagerAgent-0 was interrupted
+2023-03-26 19:51:49 [Thread-3] INFO  Agent:67 - Agent CookAgent-0 was interrupted
+2023-03-26 19:51:49 [Thread-1] INFO  Agent:67 - Agent WarehouseAgent-0 was interrupted
+[Thread-4] INFO  CustomerAgent:28 - Customer Visitor123 made an order
+[Thread-2] INFO  ManagerAgent:17 - Manager received CustomerAgent-0 order
+[Thread-6] INFO  FacilityAgent:22 - Facility DAZHENG LOOKYAMI reserved.
+[Thread-6] INFO  CookAgent:19 - Cook Ivanov A. S. reserved.
+[Thread-7] INFO  FacilityAgent:22 - Facility DAZHENG LOOKYAMI reserved.
+[Thread-7] INFO  CookAgent:19 - Cook Ivanov A. S. reserved.
+[Thread-8] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+[Thread-4] INFO  Agent:67 - Agent CustomerAgent-0 was interrupted
+[Thread-5] INFO  CustomerAgent:28 - Customer Visitor124 made an order
+[Thread-2] INFO  ManagerAgent:17 - Manager received CustomerAgent-1 order
+[Thread-11] INFO  FacilityAgent:22 - Facility DAZHENG LOOKYAMI reserved.
+[Thread-11] INFO  CookAgent:19 - Cook Ivanov A. S. reserved.
+[Thread-12] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+[Thread-5] INFO  Agent:67 - Agent CustomerAgent-1 was interrupted
+[Thread-2] INFO  Agent:67 - Agent ManagerAgent-0 was interrupted
+[Thread-1] INFO  Agent:67 - Agent WarehouseAgent-0 was interrupted
+[Thread-3] INFO  Agent:67 - Agent CookAgent-0 was interrupted
+[Thread-4] INFO  CustomerAgent:28 - Customer Visitor123 made an order
+[Thread-2] INFO  ManagerAgent:17 - [2023-02-28T10:14:40] Manager received CustomerAgent-0 order
+[Thread-6] INFO  FacilityAgent:22 - Facility DAZHENG LOOKYAMI reserved.
+[Thread-6] INFO  CookAgent:19 - Cook Ivanov A. S. reserved.
+[Thread-7] INFO  FacilityAgent:22 - Facility DAZHENG LOOKYAMI reserved.
+[Thread-7] INFO  CookAgent:19 - Cook Ivanov A. S. reserved.
+[Thread-8] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+[Thread-4] INFO  Agent:67 - Agent CustomerAgent-0 was interrupted
+[Thread-5] INFO  CustomerAgent:28 - Customer Visitor124 made an order
+[Thread-2] INFO  ManagerAgent:17 - [2023-02-28T11:09:10] Manager received CustomerAgent-1 order
+[Thread-11] INFO  FacilityAgent:22 - Facility DAZHENG LOOKYAMI reserved.
+[Thread-11] INFO  CookAgent:19 - Cook Ivanov A. S. reserved.
+[Thread-12] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+[Thread-5] INFO  Agent:67 - Agent CustomerAgent-1 was interrupted
+[Thread-2] INFO  Agent:67 - Agent ManagerAgent-0 was interrupted
+[Thread-1] INFO  Agent:67 - Agent WarehouseAgent-0 was interrupted
+[Thread-3] INFO  Agent:67 - Agent CookAgent-0 was interrupted
+[Thread-4] INFO  CustomerAgent:28 - [2023-02-28T10:12:40] Customer Visitor123 made an order
+[Thread-2] INFO  ManagerAgent:17 - [2023-02-28T10:13:50] Manager received CustomerAgent-0 order
+[Thread-6] INFO  FacilityAgent:22 - [2023-02-28T10:14:30] Facility DAZHENG LOOKYAMI reserved.
+[Thread-6] INFO  CookAgent:19 - [2023-02-28T10:14:30] Cook Ivanov A. S. reserved.
+[Thread-9] INFO  OperationAgent:20 - [2023-02-28T10:15:10] Operation 1 for process 1 started
+[Thread-9] INFO  OperationAgent:28 - [2023-02-28T10:16:50] Operation 1 for process 1 ended
+[Thread-5] INFO  CustomerAgent:28 - [2023-02-28T11:11:00] Customer Visitor124 made an order
+[Thread-2] INFO  ManagerAgent:17 - [2023-02-28T11:11:00] Manager received CustomerAgent-1 order
+[Thread-10] INFO  FacilityAgent:22 - [2023-02-28T11:11:20] Facility DAZHENG LOOKYAMI reserved.
+[Thread-10] INFO  CookAgent:19 - [2023-02-28T11:11:20] Cook Ivanov A. S. reserved.
+[Thread-12] INFO  OperationAgent:20 - [2023-02-28T11:11:20] Operation 2 for process 3 started
+[Thread-12] INFO  OperationAgent:28 - [2023-02-28T11:13:40] Operation 2 for process 3 ended
+[Thread-11] INFO  Agent:67 - Agent OrderAgent-1 was interrupted
+[Thread-5] INFO  Agent:67 - Agent CustomerAgent-1 was interrupted
+[Thread-2] INFO  Agent:67 - Agent ManagerAgent-0 was interrupted
+[Thread-4] INFO  Agent:67 - Agent CustomerAgent-0 was interrupted
+[Thread-8] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+[Thread-3] INFO  Agent:67 - Agent CookAgent-0 was interrupted
+[Thread-1] INFO  Agent:67 - Agent WarehouseAgent-0 was interrupted
+[Thread-4] INFO  CustomerAgent:28 - [2023-02-28T10:12:40] Customer Visitor123 made an order
+[Thread-2] INFO  ManagerAgent:17 - [2023-02-28T10:14:10] Manager received CustomerAgent-0 order
+[Thread-6] INFO  FacilityAgent:22 - [2023-02-28T10:15:00] Facility DAZHENG LOOKYAMI reserved.
+[Thread-6] INFO  CookAgent:19 - [2023-02-28T10:15:10] Cook Ivanov A. S. reserved.
+[Thread-9] INFO  OperationAgent:20 - [2023-02-28T10:17:20] Operation 1 for process 1 started
+[Thread-9] INFO  OperationAgent:28 - [2023-02-28T10:19:20] Operation 1 for process 1 ended
+[Thread-7] INFO  FacilityAgent:22 - [2023-02-28T10:19:20] Facility DAZHENG LOOKYAMI reserved.
+[Thread-7] INFO  CookAgent:19 - [2023-02-28T10:19:40] Cook Ivanov A. S. reserved.
+[Thread-10] INFO  OperationAgent:20 - [2023-02-28T10:19:50] Operation 2 for process 2 started
+[Thread-10] INFO  OperationAgent:28 - [2023-02-28T10:21:30] Operation 2 for process 2 ended
+[Thread-8] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+[Thread-4] INFO  Agent:67 - Agent CustomerAgent-0 was interrupted
+[Thread-5] INFO  CustomerAgent:28 - [2023-02-28T11:09:10] Customer Visitor124 made an order
+[Thread-2] INFO  ManagerAgent:17 - [2023-02-28T11:09:20] Manager received CustomerAgent-1 order
+[Thread-11] INFO  FacilityAgent:22 - [2023-02-28T11:09:30] Facility DAZHENG LOOKYAMI reserved.
+[Thread-11] INFO  CookAgent:19 - [2023-02-28T11:09:40] Cook Ivanov A. S. reserved.
+[Thread-13] INFO  OperationAgent:20 - [2023-02-28T11:09:50] Operation 3 for process 3 started
+[Thread-13] INFO  OperationAgent:28 - [2023-02-28T11:11:20] Operation 3 for process 3 ended
+[Thread-12] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+[Thread-5] INFO  Agent:67 - Agent CustomerAgent-1 was interrupted
+[Thread-3] INFO  Agent:67 - Agent CookAgent-0 was interrupted
+[Thread-1] INFO  Agent:67 - Agent WarehouseAgent-0 was interrupted
+[Thread-2] INFO  Agent:67 - Agent ManagerAgent-0 was interrupted
+[Thread-4] INFO  CustomerAgent:28 - [2023-02-28T10:12:40] Customer Visitor123 made an order
+[Thread-2] INFO  ManagerAgent:17 - [2023-02-28T10:14:10] Manager received CustomerAgent-0 order
+[Thread-1] INFO  WarehouseAgent:29 - [2023-02-28T10:14:30] Warehouse reserved products
+[Thread-6] INFO  ProcessAgent:51 - [2023-02-28T10:14:40] Process #1 started
+[Thread-6] INFO  FacilityAgent:22 - [2023-02-28T10:14:50] Facility DAZHENG LOOKYAMI reserved.
+[Thread-6] INFO  CookAgent:19 - [2023-02-28T10:15:00] Cook Ivanov A. S. reserved.
+[Thread-1] INFO  WarehouseAgent:29 - [2023-02-28T10:15:20] Warehouse reserved products
+[Thread-7] INFO  ProcessAgent:51 - [2023-02-28T10:15:20] Process #2 started
+[Thread-9] INFO  OperationAgent:20 - [2023-02-28T10:19:00] Operation 1 for process 1 started
+[Thread-9] INFO  OperationAgent:28 - [2023-02-28T10:22:10] Operation 1 for process 1 ended
+[Thread-7] INFO  FacilityAgent:22 - [2023-02-28T10:22:10] Facility DAZHENG LOOKYAMI reserved.
+[Thread-6] INFO  ProcessAgent:89 - [2023-02-28T10:22:10] Process #1 ended
+[Thread-7] INFO  CookAgent:19 - [2023-02-28T10:22:10] Cook Ivanov A. S. reserved.
+[Thread-10] INFO  OperationAgent:20 - [2023-02-28T10:23:10] Operation 2 for process 2 started
+[Thread-10] INFO  OperationAgent:28 - [2023-02-28T10:25:20] Operation 2 for process 2 ended
+[Thread-7] INFO  ProcessAgent:89 - [2023-02-28T10:26:00] Process #2 ended
+[Thread-8] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+[Thread-4] INFO  Agent:67 - Agent CustomerAgent-0 was interrupted
+[Thread-5] INFO  CustomerAgent:28 - [2023-02-28T11:09:10] Customer Visitor124 made an order
+[Thread-2] INFO  ManagerAgent:17 - [2023-02-28T11:09:10] Manager received CustomerAgent-1 order
+[Thread-1] INFO  WarehouseAgent:29 - [2023-02-28T11:09:20] Warehouse reserved products
+[Thread-11] INFO  ProcessAgent:51 - [2023-02-28T11:09:30] Process #3 started
+[Thread-11] INFO  FacilityAgent:22 - [2023-02-28T11:09:30] Facility DAZHENG LOOKYAMI reserved.
+[Thread-11] INFO  CookAgent:19 - [2023-02-28T11:09:40] Cook Ivanov A. S. reserved.
+[Thread-13] INFO  OperationAgent:20 - [2023-02-28T11:09:50] Operation 3 for process 3 started
+[Thread-13] INFO  OperationAgent:28 - [2023-02-28T11:10:00] Operation 3 for process 3 ended
+[Thread-11] INFO  ProcessAgent:89 - [2023-02-28T11:10:00] Process #3 ended
+[Thread-12] INFO  Agent:67 - Agent OrderAgent-0 was interrupted
+[Thread-5] INFO  Agent:67 - Agent CustomerAgent-1 was interrupted
+[Thread-1] INFO  Agent:67 - Agent WarehouseAgent-0 was interrupted
+[Thread-2] INFO  Agent:67 - Agent ManagerAgent-0 was interrupted
+[Thread-3] INFO  Agent:67 - Agent CookAgent-0 was interrupted

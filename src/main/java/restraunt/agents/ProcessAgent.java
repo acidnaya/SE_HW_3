@@ -1,4 +1,5 @@
 package restraunt.agents;
+import lombok.extern.slf4j.Slf4j;
 import restraunt.Main;
 
 import java.text.ParseException;
@@ -10,7 +11,7 @@ import restraunt.resources.additional.KitchenOperation;
 import restraunt.resources.additional.OperationLog;
 import restraunt.resources.basic.Process;
 
-// @AllArgsConstructor
+@Slf4j
 public class ProcessAgent extends Agent {
     volatile private static int counter = 0;
     private int ID;
@@ -45,10 +46,9 @@ public class ProcessAgent extends Agent {
         }
     }
 
-
     @Override
     public void run() {
-        System.out.println("Process # " + ID + " started");
+        log.info("[{}] Process #{} started", Time.now, ID);
         var a = Main.restaurant.getDishes();
         int eqID = 0;
         int cardNum = 0;
@@ -82,21 +82,13 @@ public class ProcessAgent extends Agent {
             }
         }
         while (true) {
-            System.out.println("ПОВИС");
             if (ready == operations.size()) {
                 break;
             }
         }
-        System.out.println("Process " + ID + " ended");
+        log.info("[{}] Process #{} ended", Time.now, ID);
         parent.registerMessage(new EndMessage());
         stop(this);
-//        Main.restaurant.getCook().registerMessage(new ReserveCooksMessage(operations));
-//        try {
-//            Thread.sleep(100); // cпим
-//        } catch (InterruptedException e) {
-//        }
-//        proc.setActive(false);
-//        parent.registerMessage(new EndMessage());
     }
 
     @Override

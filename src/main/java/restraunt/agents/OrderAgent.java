@@ -14,7 +14,6 @@ public class OrderAgent extends Agent {
     volatile private int counter;
 
     public OrderAgent(CustomerAgent c, List<Order> order) {
-        //super(); // ??
         customer = c;
         counter = order.size();
         for (var orderPart: order) {

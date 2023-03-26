@@ -1,38 +1,23 @@
 package restraunt.agents;
 
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import restraunt.Config;
-import restraunt.Main;
 import restraunt.messages.Message;
 import restraunt.resources.additional.*;
 import restraunt.resources.basic.*;
 
 @AllArgsConstructor
+@Slf4j
 public class OperationAgent extends Agent {
-    OperationLog log; // вас куда-то надо записывать и потом выводить лог
+    OperationLog operationLog; // вас куда-то надо записывать и потом выводить лог
     ProcessAgent parent;
     KitchenOperation op;
     Cook cook;
     KitchenFacility facility;
     @Override
     public void run() {
-//        var a = Main.restaurant.cooks;
-//        for (var i : a) {
-//            if (!i.isActive()) {
-//                i.setActive(true);
-//                System.out.println(i.getCname() + " starts work");
-//                try {
-//                    Thread.sleep((long) op.getTime()); // со спид что то сделать
-//                } catch (InterruptedException e) {
-//                    throw new RuntimeException(e);
-//                }
-//                i.setActive(false);
-//                System.out.println(i.getCname() + " ends work");
-//                break;
-//            }
-//        }
-
-        System.out.println("Operation " + log.getID() + " for process " + log.getProcessID() + " started");
+        log.info("[{}] Operation {} for process {} started", Time.now, operationLog.getID(), operationLog.getProcessID());
         try {
             Thread.sleep((long) op.getTime() * 1000 / Config.speed);
         } catch (InterruptedException e) {
@@ -40,7 +25,7 @@ public class OperationAgent extends Agent {
         } finally {
             cook.setActive(true);
             facility.setActive(true);
-            System.out.println("Operation " + log.getID() + " for process " + log.getProcessID() + " ended");
+            log.info("[{}] Operation {} for process {} ended", Time.now, operationLog.getID(), operationLog.getProcessID());
             parent.increaseReadyCounter();
         }
     }
