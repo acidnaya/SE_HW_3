@@ -11,7 +11,7 @@ import java.util.Objects;
 public class OrderAgent extends Agent {
     CustomerAgent customer;
     List<ProcessAgent> processes = new ArrayList<>();
-    int counter;
+    volatile private int counter;
 
     public OrderAgent(CustomerAgent c, List<Order> order) {
         //super(); // ??

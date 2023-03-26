@@ -12,9 +12,9 @@ import restraunt.resources.basic.Process;
 
 // @AllArgsConstructor
 public class ProcessAgent extends Agent {
-    private static int counter = 0;
+    volatile private static int counter = 0;
     private int ID;
-    private int ready = 0;
+    volatile private int ready = 0;
     int dish;
     OrderAgent parent;
 
@@ -23,13 +23,17 @@ public class ProcessAgent extends Agent {
     List<KitchenOperation> operations; // список операций из дишкард -
     // их надо кинуть в кукАгент - он раскидывает их по свободным поварам (непонятно как мы чекаем свободность повара)
 
-
     public synchronized void increaseReadyCounter() {
         ready += 1;
     }
 
+    public synchronized void setID() {
+        counter += 1;
+        ID = counter;
+    }
+
     public ProcessAgent(int d, OrderAgent p) {
-        ID = ++counter;
+        setID();
         dish = d;
         parent = p;
         proc.setActive(true);
@@ -44,8 +48,8 @@ public class ProcessAgent extends Agent {
 
     @Override
     public void run() {
-        System.out.println("Process for " + dish + " started");
-        var a = Main.restaurant.dishes;
+        System.out.println("Process # " + ID + " started");
+        var a = Main.restaurant.getDishes();
         int eqID = 0;
         int cardNum = 0;
         for (var i : a) {

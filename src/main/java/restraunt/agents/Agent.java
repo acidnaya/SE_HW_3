@@ -59,7 +59,6 @@ public abstract class Agent<MessageType extends Message> implements Runnable {
         while (true) {
             try {
                 MessageType message = messageQueue.take();
-
                 log.debug("Agent {} received message {}", this.name, message.getId());
                 proceed(message);
                 log.debug("Agent {} completed message {}", this.name, message.getId());

@@ -17,10 +17,8 @@ import static restraunt.Main.logger; // хуйня или не хуйня?
 @NoArgsConstructor
 public class RestaurantSimulation {
     // public static AgentRepository repository;
-    List<Agent> repository;
-
+    private List<Agent> localRepository;
     public Time time;
-
     @Getter
     private ManagerAgent manager;
     @Getter
@@ -30,10 +28,8 @@ public class RestaurantSimulation {
     @Getter
     private FacilityAgent facility;
     private List<Customer> customers;
-
-    //public List<Cook> cooks;
     @Getter
-    public List<MenuDish> dishes;
+    private List<MenuDish> dishes;
     private List<ProductType> productTypes;
     private List<Product> productItems;
 
@@ -41,56 +37,55 @@ public class RestaurantSimulation {
     public List<DishCard> dishCards;
     private List<KitchenOperationType> operations;
     private List<KitchenFacilityType> facilityTypes;
-    //private List<KitchenFacility> facilities;
     private ObjectMapper objectMapper = new ObjectMapper();
 
-    private void getCustomers() throws IOException {
-        File file = new File(Config.customersPath); // мб выкинуть отсюда
+    private void getCustomersJSON() throws IOException {
+        File file = new File(Config.customersPath);
         customers = objectMapper.readValue(file, new TypeReference<>() {});
         for (var customer: customers) {
-            repository.add(new CustomerAgent(customer));
+            localRepository.add(new CustomerAgent(customer));
         }
     }
 
-    private void getCooks() throws IOException {
-        File file = new File(Config.cooksPath); // мб выкинуть отсюда
+    private void getCooksJSON() throws IOException {
+        File file = new File(Config.cooksPath);
         List<Cook> cooks = objectMapper.readValue(file, new TypeReference<>() {});
         cook = new CookAgent(cooks);
     }
 
-    private void getFacilityTypes() throws IOException {
+    private void getFacilityTypesJSON() throws IOException {
         File file = new File(Config.facilityTypesPath); // мб выкинуть отсюда
         facilityTypes = objectMapper.readValue(file, new TypeReference<>() {});
     }
 
-    private void getFacilities() throws IOException {
+    private void getFacilitiesJSON() throws IOException {
         File file = new File(Config.facilityPath); // мб выкинуть отсюда
         List<KitchenFacility> facilities = objectMapper.readValue(file, new TypeReference<>() {});
         facility = new FacilityAgent(facilities);
     }
 
-    private void getDishes() throws IOException {
+    private void getDishesJSON() throws IOException {
         File file = new File(Config.dishesPath); // мб выкинуть отсюда
         dishes = objectMapper.readValue(file, new TypeReference<>() {});
     }
 
-    private void getProductTypes() throws IOException {
+    private void getProductTypesJSON() throws IOException {
         File file = new File(Config.productTypesPath);
         productTypes = objectMapper.readValue(file, new TypeReference<>() {});
     }
 
-    private void getProductItems() throws IOException {
+    private void getProductItemsJSON() throws IOException {
         File file = new File(Config.productsPath);
         productItems = objectMapper.readValue(file, new TypeReference<>() {});
     }
 
-    private void getDishCards() throws IOException {
+    private void getDishCardsJSON() throws IOException {
         File file = new File(Config.cardsPath);
         dishCards = objectMapper.readValue(file, new TypeReference<>() {});
 
     }
 
-    private void getOperations() throws IOException {
+    private void getOperationsJSON() throws IOException {
         File file = new File(Config.operationTypesPath);
         operations = objectMapper.readValue(file, new TypeReference<>() {});
     }
@@ -101,17 +96,17 @@ public class RestaurantSimulation {
     }
 
     public void getResources() {
-        repository = new ArrayList<>();
+        localRepository = new ArrayList<>();
         try {
-            getDishCards();
-            getCooks();
-            getFacilityTypes();
-            getProductTypes();
-            getProductItems();
-            getDishes();
-            getFacilities();
-            getOperations();
-            getCustomers();
+            getDishCardsJSON();
+            getCooksJSON();
+            getFacilityTypesJSON();
+            getProductTypesJSON();
+            getProductItemsJSON();
+            getDishesJSON();
+            getFacilitiesJSON();
+            getOperationsJSON();
+            getCustomersJSON();
         } catch (Exception e) {
             logger.error("Failed to initialize resources", e);
         }
@@ -125,7 +120,7 @@ public class RestaurantSimulation {
         Agent.start(warehouse);
         Agent.start(manager);
         Agent.start(cook);
-        for (var agent: repository) {
+        for (var agent: localRepository) {
             agent.start(agent);
         }
         try {
