@@ -2,6 +2,7 @@ package restraunt.agents;
 
 import lombok.Getter;
 import restraunt.Config;
+import restraunt.Main;
 import restraunt.agents.Agent;
 import restraunt.messages.Message;
 
@@ -63,6 +64,7 @@ public class Time extends Agent {
         }
         AgentRepository.remove(this);
         AgentRepository.stopAll();
+        Main.restaurant.writeLog();
         stop(this);
     }
 }

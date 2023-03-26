@@ -3,6 +3,7 @@ package restraunt.agents;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import restraunt.Config;
+import restraunt.Main;
 import restraunt.messages.Message;
 import restraunt.resources.additional.*;
 import restraunt.resources.basic.*;
@@ -25,8 +26,10 @@ public class OperationAgent extends Agent {
         } finally {
             cook.setActive(true);
             facility.setActive(true);
+            operationLog.fixEnded();
             log.info("[{}] Operation {} for process {} ended", Time.now, operationLog.getID(), operationLog.getProcessID());
             parent.increaseReadyCounter();
+            Main.restaurant.addLog(operationLog);
         }
     }
 
