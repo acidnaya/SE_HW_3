@@ -1,4 +1,4 @@
-package restraunt;
+package restaurant;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -6,9 +6,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
-import restraunt.agents.*;
-import restraunt.resources.additional.OperationLog;
-import restraunt.resources.basic.*;
+import restaurant.agents.*;
+import restaurant.messages.Message;
+import restaurant.resources.additional.OperationLog;
+import restaurant.resources.basic.*;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -17,8 +18,8 @@ import java.util.List;
 @NoArgsConstructor
 @Slf4j
 public class RestaurantSimulation {
-    private List<OperationLog> outputLog = new ArrayList<>();
-    private List<Agent> localRepository;
+    private final List<OperationLog> outputLog = new ArrayList<>();
+    private List<Agent<Message>> localRepository;
     public Time time;
     @Getter
     private ManagerAgent manager;
@@ -28,15 +29,11 @@ public class RestaurantSimulation {
     private CookAgent cook;
     @Getter
     private FacilityAgent facility;
-    private List<Customer> customers;
     @Getter
     private List<MenuDish> dishes;
-    private List<ProductType> productTypes;
     private List<Product> productItems;
     @Getter
     private List<DishCard> dishCards;
-    private List<KitchenOperationType> operations;
-    private List<KitchenFacilityType> facilityTypes;
     private final ObjectMapper objectMapper = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT);
 
     public void addLog(OperationLog l) {
@@ -57,7 +54,8 @@ public class RestaurantSimulation {
     }
     private void getCustomersJSON() throws IOException {
         File file = new File(Config.customersPath);
-        customers = objectMapper.readValue(file, new TypeReference<>() {});
+        List<Customer> customers = objectMapper.readValue(file, new TypeReference<>() {
+        });
         for (var customer: customers) {
             localRepository.add(new CustomerAgent(customer));
         }
@@ -70,24 +68,26 @@ public class RestaurantSimulation {
     }
 
     private void getFacilityTypesJSON() throws IOException {
-        File file = new File(Config.facilityTypesPath); // мб выкинуть отсюда
-        facilityTypes = objectMapper.readValue(file, new TypeReference<>() {});
+        File file = new File(Config.facilityTypesPath);
+        List<KitchenFacilityType> facilityTypes = objectMapper.readValue(file, new TypeReference<>() {
+        });
     }
 
     private void getFacilitiesJSON() throws IOException {
-        File file = new File(Config.facilityPath); // мб выкинуть отсюда
+        File file = new File(Config.facilityPath);
         List<KitchenFacility> facilities = objectMapper.readValue(file, new TypeReference<>() {});
         facility = new FacilityAgent(facilities);
     }
 
     private void getDishesJSON() throws IOException {
-        File file = new File(Config.dishesPath); // мб выкинуть отсюда
+        File file = new File(Config.dishesPath);
         dishes = objectMapper.readValue(file, new TypeReference<>() {});
     }
 
     private void getProductTypesJSON() throws IOException {
         File file = new File(Config.productTypesPath);
-        productTypes = objectMapper.readValue(file, new TypeReference<>() {});
+        List<ProductType> productTypes = objectMapper.readValue(file, new TypeReference<>() {
+        });
     }
 
     private void getProductItemsJSON() throws IOException {
@@ -103,12 +103,12 @@ public class RestaurantSimulation {
 
     private void getOperationsJSON() throws IOException {
         File file = new File(Config.operationTypesPath);
-        operations = objectMapper.readValue(file, new TypeReference<>() {});
+        List<KitchenOperationType> operations = objectMapper.readValue(file, new TypeReference<>() {
+        });
     }
 
     private String serialize(Object o) throws JsonProcessingException {
-        String serialized = objectMapper.writeValueAsString(o);
-        return serialized;
+        return objectMapper.writeValueAsString(o);
     }
 
     public void getResources() {
@@ -131,21 +131,12 @@ public class RestaurantSimulation {
     public void start() {
         time = new Time();
         manager = new ManagerAgent();
-        warehouse = new WarehouseAgent(productItems, productTypes);
+        warehouse = new WarehouseAgent(productItems);
         Agent.start(time);
         Agent.start(warehouse);
         Agent.start(manager);
-        Agent.start(cook);
         for (var agent: localRepository) {
             Agent.start(agent);
         }
-//        try {
-//            for (int i = 0; i < 10; ++i) {
-//                System.out.println("time: " + time.timeToString(time.getCurrentTime()));
-//                Thread.sleep(500);
-//            }
-//        } catch (InterruptedException e) {
-//            throw new RuntimeException(e);
-//        }
     }
 }
