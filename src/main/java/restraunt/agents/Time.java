@@ -61,5 +61,6 @@ public class Time extends Agent {
         }
         AgentRepository.remove(this);
         AgentRepository.stopAll();
+        stop(this);
     }
 }

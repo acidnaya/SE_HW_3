@@ -32,20 +32,9 @@ public class OrderAgent extends Agent {
             counter--;
             System.out.println(getName() + " get end message");
             if (counter == 0) {
-//                var customer = findCustomer();
                 customer.registerMessage(new EndMessage());
                 stop(this);
             }
         }
     }
-
-//    public CustomerAgent findCustomer() {
-//        var customers = AgentRepository.findByType(CustomerAgent.class);
-//        for (var customer : customers) {
-//            if (Objects.equals(customer.getName(), customerName)) {
-//                return customer;
-//            }
-//        }
-//        return null;
-//    }
 }

@@ -27,9 +27,11 @@ public class RestaurantSimulation {
     private WarehouseAgent warehouse;
     @Getter
     private CookAgent cook;
+    @Getter
+    private FacilityAgent facility;
     private List<Customer> customers;
 
-    public List<Cook> cooks;
+    //public List<Cook> cooks;
     @Getter
     public List<MenuDish> dishes;
     private List<ProductType> productTypes;
@@ -39,7 +41,7 @@ public class RestaurantSimulation {
     public List<DishCard> dishCards;
     private List<KitchenOperationType> operations;
     private List<KitchenFacilityType> facilityTypes;
-    private List<KitchenFacility> facilities;
+    //private List<KitchenFacility> facilities;
     private ObjectMapper objectMapper = new ObjectMapper();
 
     private void getCustomers() throws IOException {
@@ -52,7 +54,8 @@ public class RestaurantSimulation {
 
     private void getCooks() throws IOException {
         File file = new File(Config.cooksPath); // мб выкинуть отсюда
-        cooks = objectMapper.readValue(file, new TypeReference<>() {});
+        List<Cook> cooks = objectMapper.readValue(file, new TypeReference<>() {});
+        cook = new CookAgent(cooks);
     }
 
     private void getFacilityTypes() throws IOException {
@@ -62,7 +65,8 @@ public class RestaurantSimulation {
 
     private void getFacilities() throws IOException {
         File file = new File(Config.facilityPath); // мб выкинуть отсюда
-        facilities = objectMapper.readValue(file, new TypeReference<>() {});
+        List<KitchenFacility> facilities = objectMapper.readValue(file, new TypeReference<>() {});
+        facility = new FacilityAgent(facilities);
     }
 
     private void getDishes() throws IOException {
@@ -117,7 +121,6 @@ public class RestaurantSimulation {
         time = new Time();
         manager = new ManagerAgent();
         warehouse = new WarehouseAgent(productItems, productTypes);
-        cook = new CookAgent();
         Agent.start(time);
         Agent.start(warehouse);
         Agent.start(manager);

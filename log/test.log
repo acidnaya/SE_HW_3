@@ -198,3 +198,79 @@ java.lang.NullPointerException: Cannot invoke "restraunt.resources.basic.Process
 2023-03-26 15:31:35 [Thread-1] INFO  Agent:68 - Agent WarehouseAgent-0 was interrupted
 2023-03-26 15:31:35 [Thread-2] INFO  Agent:68 - Agent ManagerAgent-0 was interrupted
 2023-03-26 15:31:35 [Thread-3] INFO  Agent:68 - Agent CookAgent-0 was interrupted
+2023-03-26 15:57:41 [Thread-8] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 15:57:41 [Thread-4] INFO  Agent:68 - Agent CustomerAgent-0 was interrupted
+2023-03-26 15:57:41 [Thread-12] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 15:57:41 [Thread-5] INFO  Agent:68 - Agent CustomerAgent-1 was interrupted
+2023-03-26 15:57:45 [Thread-3] INFO  Agent:68 - Agent CookAgent-0 was interrupted
+2023-03-26 15:57:45 [Thread-2] INFO  Agent:68 - Agent ManagerAgent-0 was interrupted
+2023-03-26 15:57:45 [Thread-1] INFO  Agent:68 - Agent WarehouseAgent-0 was interrupted
+2023-03-26 16:23:11 [Thread-8] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 16:23:11 [Thread-4] INFO  Agent:68 - Agent CustomerAgent-0 was interrupted
+2023-03-26 16:23:11 [Thread-12] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 16:23:11 [Thread-5] INFO  Agent:68 - Agent CustomerAgent-1 was interrupted
+2023-03-26 16:23:16 [Thread-3] INFO  Agent:68 - Agent CookAgent-0 was interrupted
+2023-03-26 16:23:16 [Thread-2] INFO  Agent:68 - Agent ManagerAgent-0 was interrupted
+2023-03-26 16:23:16 [Thread-1] INFO  Agent:68 - Agent WarehouseAgent-0 was interrupted
+2023-03-26 17:47:55 [Thread-2] ERROR Agent:71 - An error occurred in Agent ManagerAgent-0
+java.lang.NullPointerException: Cannot invoke "restraunt.agents.FacilityAgent.getFreeFacility(int)" because the return value of "restraunt.RestaurantSimulation.getFacility()" is null
+	at restraunt.agents.ProcessAgent.<init>(ProcessAgent.java:60) ~[classes/:?]
+	at restraunt.agents.OrderAgent.<init>(OrderAgent.java:22) ~[classes/:?]
+	at restraunt.agents.ManagerAgent.proceed(ManagerAgent.java:17) ~[classes/:?]
+	at restraunt.agents.Agent.run(Agent.java:64) [classes/:?]
+	at java.lang.Thread.run(Thread.java:1589) [?:?]
+2023-03-26 17:47:59 [Thread-4] INFO  Agent:68 - Agent CustomerAgent-0 was interrupted
+2023-03-26 17:47:59 [Thread-3] INFO  Agent:68 - Agent CookAgent-0 was interrupted
+2023-03-26 17:47:59 [Thread-1] INFO  Agent:68 - Agent WarehouseAgent-0 was interrupted
+2023-03-26 17:47:59 [Thread-5] INFO  Agent:68 - Agent CustomerAgent-1 was interrupted
+2023-03-26 17:51:58 [Thread-2] ERROR Agent:71 - An error occurred in Agent ManagerAgent-0
+java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "this.cooks" is null
+	at restraunt.agents.CookAgent.getFreeCook(CookAgent.java:19) ~[classes/:?]
+	at restraunt.agents.ProcessAgent.<init>(ProcessAgent.java:62) ~[classes/:?]
+	at restraunt.agents.OrderAgent.<init>(OrderAgent.java:22) ~[classes/:?]
+	at restraunt.agents.ManagerAgent.proceed(ManagerAgent.java:17) ~[classes/:?]
+	at restraunt.agents.Agent.run(Agent.java:64) [classes/:?]
+	at java.lang.Thread.run(Thread.java:1589) [?:?]
+2023-03-26 17:52:02 [Thread-5] INFO  Agent:68 - Agent CustomerAgent-1 was interrupted
+2023-03-26 17:52:02 [Thread-1] INFO  Agent:68 - Agent WarehouseAgent-0 was interrupted
+2023-03-26 17:52:02 [Thread-4] INFO  Agent:68 - Agent CustomerAgent-0 was interrupted
+2023-03-26 17:52:02 [Thread-3] INFO  Agent:68 - Agent CookAgent-0 was interrupted
+2023-03-26 17:53:38 [Thread-10] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 17:53:38 [Thread-4] INFO  Agent:68 - Agent CustomerAgent-0 was interrupted
+2023-03-26 17:53:38 [Thread-13] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 17:53:38 [Thread-5] INFO  Agent:68 - Agent CustomerAgent-1 was interrupted
+2023-03-26 17:53:42 [Thread-2] INFO  Agent:68 - Agent ManagerAgent-0 was interrupted
+2023-03-26 17:53:42 [Thread-1] INFO  Agent:68 - Agent WarehouseAgent-0 was interrupted
+2023-03-26 17:53:42 [Thread-3] INFO  Agent:68 - Agent CookAgent-0 was interrupted
+2023-03-26 17:57:57 [Thread-5] INFO  Agent:68 - Agent CustomerAgent-1 was interrupted
+2023-03-26 17:57:57 [Thread-3] INFO  Agent:68 - Agent CookAgent-0 was interrupted
+2023-03-26 17:57:57 [Thread-4] INFO  Agent:68 - Agent CustomerAgent-0 was interrupted
+2023-03-26 17:57:57 [Thread-1] INFO  Agent:68 - Agent WarehouseAgent-0 was interrupted
+2023-03-26 18:05:28 [Thread-8] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 18:05:28 [Thread-4] INFO  Agent:68 - Agent CustomerAgent-0 was interrupted
+2023-03-26 18:05:33 [Thread-12] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 18:05:33 [Thread-5] INFO  Agent:68 - Agent CustomerAgent-1 was interrupted
+2023-03-26 18:05:33 [Thread-2] INFO  Agent:68 - Agent ManagerAgent-0 was interrupted
+2023-03-26 18:05:33 [Thread-3] INFO  Agent:68 - Agent CookAgent-0 was interrupted
+2023-03-26 18:05:33 [Thread-1] INFO  Agent:68 - Agent WarehouseAgent-0 was interrupted
+2023-03-26 18:09:19 [Thread-12] INFO  Agent:68 - Agent OrderAgent-1 was interrupted
+2023-03-26 18:09:19 [Thread-8] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 18:09:19 [Thread-5] INFO  Agent:68 - Agent CustomerAgent-1 was interrupted
+2023-03-26 18:09:19 [Thread-1] INFO  Agent:68 - Agent WarehouseAgent-0 was interrupted
+2023-03-26 18:09:19 [Thread-4] INFO  Agent:68 - Agent CustomerAgent-0 was interrupted
+2023-03-26 18:09:19 [Thread-2] INFO  Agent:68 - Agent ManagerAgent-0 was interrupted
+2023-03-26 18:09:19 [Thread-3] INFO  Agent:68 - Agent CookAgent-0 was interrupted
+2023-03-26 18:13:10 [Thread-8] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 18:13:10 [Thread-4] INFO  Agent:68 - Agent CustomerAgent-0 was interrupted
+2023-03-26 18:13:15 [Thread-3] INFO  Agent:68 - Agent CookAgent-0 was interrupted
+2023-03-26 18:13:15 [Thread-1] INFO  Agent:68 - Agent WarehouseAgent-0 was interrupted
+2023-03-26 18:13:15 [Thread-2] INFO  Agent:68 - Agent ManagerAgent-0 was interrupted
+2023-03-26 18:13:15 [Thread-12] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 18:13:15 [Thread-5] INFO  Agent:68 - Agent CustomerAgent-1 was interrupted
+2023-03-26 18:13:58 [Thread-8] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 18:13:58 [Thread-4] INFO  Agent:68 - Agent CustomerAgent-0 was interrupted
+2023-03-26 18:13:58 [Thread-12] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 18:13:58 [Thread-5] INFO  Agent:68 - Agent CustomerAgent-1 was interrupted
+2023-03-26 18:14:02 [Thread-1] INFO  Agent:68 - Agent WarehouseAgent-0 was interrupted
+2023-03-26 18:14:02 [Thread-2] INFO  Agent:68 - Agent ManagerAgent-0 was interrupted
+2023-03-26 18:14:02 [Thread-3] INFO  Agent:68 - Agent CookAgent-0 was interrupted
