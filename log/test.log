@@ -1,12 +1,12 @@
 2023-03-26 03:09:48 [Thread-6] ERROR Agent:71 - An error occurred in Agent OrderAgent-0
-java.lang.NullPointerException: Cannot invoke "restraunt.agents.CustomerAgent.registerMessage(restraunt.messages.Message)" because "customer" is null
-	at restraunt.agents.OrderAgent.proceed(OrderAgent.java:34) ~[classes/:?]
-	at restraunt.agents.Agent.run(Agent.java:64) [classes/:?]
+java.lang.NullPointerException: Cannot invoke "restaurant.agents.CustomerAgent.registerMessage(restaurant.messages.Message)" because "customer" is null
+	at restaurant.agents.OrderAgent.proceed(OrderAgent.java:34) ~[classes/:?]
+	at restaurant.agents.Agent.run(Agent.java:64) [classes/:?]
 	at java.lang.Thread.run(Thread.java:1589) [?:?]
 2023-03-26 03:09:48 [Thread-8] ERROR Agent:71 - An error occurred in Agent OrderAgent-1
-java.lang.NullPointerException: Cannot invoke "restraunt.agents.CustomerAgent.registerMessage(restraunt.messages.Message)" because "customer" is null
-	at restraunt.agents.OrderAgent.proceed(OrderAgent.java:34) ~[classes/:?]
-	at restraunt.agents.Agent.run(Agent.java:64) [classes/:?]
+java.lang.NullPointerException: Cannot invoke "restaurant.agents.CustomerAgent.registerMessage(restaurant.messages.Message)" because "customer" is null
+	at restaurant.agents.OrderAgent.proceed(OrderAgent.java:34) ~[classes/:?]
+	at restaurant.agents.Agent.run(Agent.java:64) [classes/:?]
 	at java.lang.Thread.run(Thread.java:1589) [?:?]
 2023-03-26 03:13:37 [Thread-2] INFO  Agent:68 - Agent CustomerAgent-0 was interrupted
 2023-03-26 03:13:37 [Thread-6] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
@@ -78,11 +78,11 @@ java.lang.NullPointerException: Cannot invoke "restraunt.agents.CustomerAgent.re
 2023-03-26 10:41:58 [Thread-2] INFO  Agent:68 - Agent ManagerAgent-0 was interrupted
 2023-03-26 10:41:58 [Thread-1] INFO  Agent:68 - Agent WarehouseAgent-0 was interrupted
 2023-03-26 12:56:44 [Thread-2] ERROR Agent:71 - An error occurred in Agent ManagerAgent-0
-java.lang.NullPointerException: Cannot invoke "restraunt.resources.basic.Process.setActive(boolean)" because "this.proc" is null
-	at restraunt.agents.ProcessAgent.<init>(ProcessAgent.java:30) ~[classes/:?]
-	at restraunt.agents.OrderAgent.<init>(OrderAgent.java:22) ~[classes/:?]
-	at restraunt.agents.ManagerAgent.proceed(ManagerAgent.java:17) ~[classes/:?]
-	at restraunt.agents.Agent.run(Agent.java:64) [classes/:?]
+java.lang.NullPointerException: Cannot invoke "restaurant.resources.basic.Process.setActive(boolean)" because "this.proc" is null
+	at restaurant.agents.ProcessAgent.<init>(ProcessAgent.java:30) ~[classes/:?]
+	at restaurant.agents.OrderAgent.<init>(OrderAgent.java:22) ~[classes/:?]
+	at restaurant.agents.ManagerAgent.proceed(ManagerAgent.java:17) ~[classes/:?]
+	at restaurant.agents.Agent.run(Agent.java:64) [classes/:?]
 	at java.lang.Thread.run(Thread.java:1589) [?:?]
 2023-03-26 12:56:49 [Thread-4] INFO  Agent:68 - Agent CustomerAgent-1 was interrupted
 2023-03-26 12:56:49 [Thread-3] INFO  Agent:68 - Agent CustomerAgent-0 was interrupted
@@ -213,11 +213,11 @@ java.lang.NullPointerException: Cannot invoke "restraunt.resources.basic.Process
 2023-03-26 16:23:16 [Thread-2] INFO  Agent:68 - Agent ManagerAgent-0 was interrupted
 2023-03-26 16:23:16 [Thread-1] INFO  Agent:68 - Agent WarehouseAgent-0 was interrupted
 2023-03-26 17:47:55 [Thread-2] ERROR Agent:71 - An error occurred in Agent ManagerAgent-0
-java.lang.NullPointerException: Cannot invoke "restraunt.agents.FacilityAgent.getFreeFacility(int)" because the return value of "restraunt.RestaurantSimulation.getFacility()" is null
-	at restraunt.agents.ProcessAgent.<init>(ProcessAgent.java:60) ~[classes/:?]
-	at restraunt.agents.OrderAgent.<init>(OrderAgent.java:22) ~[classes/:?]
-	at restraunt.agents.ManagerAgent.proceed(ManagerAgent.java:17) ~[classes/:?]
-	at restraunt.agents.Agent.run(Agent.java:64) [classes/:?]
+java.lang.NullPointerException: Cannot invoke "restaurant.agents.FacilityAgent.getFreeFacility(int)" because the return value of "restaurant.RestaurantSimulation.getFacility()" is null
+	at restaurant.agents.ProcessAgent.<init>(ProcessAgent.java:60) ~[classes/:?]
+	at restaurant.agents.OrderAgent.<init>(OrderAgent.java:22) ~[classes/:?]
+	at restaurant.agents.ManagerAgent.proceed(ManagerAgent.java:17) ~[classes/:?]
+	at restaurant.agents.Agent.run(Agent.java:64) [classes/:?]
 	at java.lang.Thread.run(Thread.java:1589) [?:?]
 2023-03-26 17:47:59 [Thread-4] INFO  Agent:68 - Agent CustomerAgent-0 was interrupted
 2023-03-26 17:47:59 [Thread-3] INFO  Agent:68 - Agent CookAgent-0 was interrupted
@@ -225,11 +225,11 @@ java.lang.NullPointerException: Cannot invoke "restraunt.agents.FacilityAgent.ge
 2023-03-26 17:47:59 [Thread-5] INFO  Agent:68 - Agent CustomerAgent-1 was interrupted
 2023-03-26 17:51:58 [Thread-2] ERROR Agent:71 - An error occurred in Agent ManagerAgent-0
 java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "this.cooks" is null
-	at restraunt.agents.CookAgent.getFreeCook(CookAgent.java:19) ~[classes/:?]
-	at restraunt.agents.ProcessAgent.<init>(ProcessAgent.java:62) ~[classes/:?]
-	at restraunt.agents.OrderAgent.<init>(OrderAgent.java:22) ~[classes/:?]
-	at restraunt.agents.ManagerAgent.proceed(ManagerAgent.java:17) ~[classes/:?]
-	at restraunt.agents.Agent.run(Agent.java:64) [classes/:?]
+	at restaurant.agents.CookAgent.getFreeCook(CookAgent.java:19) ~[classes/:?]
+	at restaurant.agents.ProcessAgent.<init>(ProcessAgent.java:62) ~[classes/:?]
+	at restaurant.agents.OrderAgent.<init>(OrderAgent.java:22) ~[classes/:?]
+	at restaurant.agents.ManagerAgent.proceed(ManagerAgent.java:17) ~[classes/:?]
+	at restaurant.agents.Agent.run(Agent.java:64) [classes/:?]
 	at java.lang.Thread.run(Thread.java:1589) [?:?]
 2023-03-26 17:52:02 [Thread-5] INFO  Agent:68 - Agent CustomerAgent-1 was interrupted
 2023-03-26 17:52:02 [Thread-1] INFO  Agent:68 - Agent WarehouseAgent-0 was interrupted
