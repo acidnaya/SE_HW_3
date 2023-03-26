@@ -1,5 +1,6 @@
 package restraunt.resources.basic;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,4 +16,8 @@ public class Order {
     int ID;
     @JsonProperty("menu_dish")
     int dish;
+    @JsonIgnore()
+    public String toString() {
+        return "Order: " + Integer.toString(ID) + "; Dish: " + Integer.toString(dish);
+    }
 }

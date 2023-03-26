@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.extern.jackson.Jacksonized;
-import restraunt.Configurations;
+//import restraunt.Configurations;
 
 import java.util.Date;
 
@@ -31,10 +31,10 @@ public class Product {
     double quantity;
     @JsonProperty("prod_item_cost")
     double cost;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, timezone = Configurations.timezone)
+   // @JsonFormat(shape = JsonFormat.Shape.STRING, timezone = Configurations.timezone)
     @JsonProperty("prod_item_delivered")
     Date delivered;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, timezone = Configurations.timezone)
+   // @JsonFormat(shape = JsonFormat.Shape.STRING, timezone = Configurations.timezone)
     @JsonProperty("prod_item_valid_until")
     Date valid_until;
 }
