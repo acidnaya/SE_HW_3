@@ -13,9 +13,9 @@ public class CustomerAgent extends Agent {
 
     @Override
     protected void proceed(Message message) throws Exception {
-        if (message instanceof EndMessage m) {
+        if (message instanceof EndMessage) {
             customer.setEnded(Main.restaurant.time.getCurrentDate());
-            System.out.println(getName() + " received his order at " + customer.getEnded());
+            log.info(getName() + " received his order at " + customer.getEnded());
            // stop(this);
         }
     }
