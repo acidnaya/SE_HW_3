@@ -25,12 +25,18 @@ public class RestaurantSimulation {
     private ManagerAgent manager;
     @Getter
     private WarehouseAgent warehouse;
+    @Getter
+    private CookAgent cook;
     private List<Customer> customers;
-    private List<Cook> cooks;
-    private List<MenuDish> dishes;
+
+    public List<Cook> cooks;
+    @Getter
+    public List<MenuDish> dishes;
     private List<ProductType> productTypes;
     private List<Product> productItems;
-    private List<DishCard> dishCards;
+
+    @Getter
+    public List<DishCard> dishCards;
     private List<KitchenOperationType> operations;
     private List<KitchenFacilityType> facilityTypes;
     private List<KitchenFacility> facilities;
@@ -111,9 +117,11 @@ public class RestaurantSimulation {
         time = new Time();
         manager = new ManagerAgent();
         warehouse = new WarehouseAgent(productItems, productTypes);
+        cook = new CookAgent();
         Agent.start(time);
         Agent.start(warehouse);
         Agent.start(manager);
+        Agent.start(cook);
         for (var agent: repository) {
             agent.start(agent);
         }

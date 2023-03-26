@@ -16,8 +16,4 @@ public class Order {
     int ID;
     @JsonProperty("menu_dish")
     int dish;
-    @JsonIgnore()
-    public String toString() {
-        return "Order: " + Integer.toString(ID) + "; Dish: " + Integer.toString(dish);
-    }
 }

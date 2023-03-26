@@ -27,7 +27,7 @@ public class WarehouseAgent extends Agent {
     @Override
     protected void proceed(Message message) throws Exception {
         if (message instanceof ReserveMessage m) {
-            System.out.println(getName() + " reserve products");
+            System.out.println(getName() + " reserve products" );
         }
     }
 }
