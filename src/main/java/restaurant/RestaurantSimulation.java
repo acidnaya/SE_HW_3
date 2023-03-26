@@ -1,21 +1,23 @@
-package restaurant;
+package restraunt;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
-import restaurant.agents.*;
-import restaurant.resources.basic.*;
+import restraunt.agents.*;
+import restraunt.resources.additional.OperationLog;
+import restraunt.resources.basic.*;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @NoArgsConstructor
 @Slf4j
 public class RestaurantSimulation {
+    private List<OperationLog> outputLog = new ArrayList<>();
     private List<Agent> localRepository;
     public Time time;
     @Getter
@@ -32,11 +34,27 @@ public class RestaurantSimulation {
     private List<ProductType> productTypes;
     private List<Product> productItems;
     @Getter
-    public List<DishCard> dishCards;
+    private List<DishCard> dishCards;
     private List<KitchenOperationType> operations;
     private List<KitchenFacilityType> facilityTypes;
-    private ObjectMapper objectMapper = new ObjectMapper();
+    private final ObjectMapper objectMapper = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT);
 
+    public void addLog(OperationLog l) {
+        outputLog.add(l.createCopy());
+    }
+
+    public void writeLog() {
+        try {
+            var fw = new FileWriter(Config.outputPath);
+            PrintWriter writer = new PrintWriter(fw);
+            var s = serialize(outputLog);
+            writer.write(s);
+            fw.close();
+            log.info("OPERATIONS OUTPUT LOG WAS WRITTEN TO {}", Config.outputPath);
+        } catch (Exception e) {
+            log.error("Could not write output operations log...");
+        }
+    }
     private void getCustomersJSON() throws IOException {
         File file = new File(Config.customersPath);
         customers = objectMapper.readValue(file, new TypeReference<>() {});
@@ -113,7 +131,7 @@ public class RestaurantSimulation {
     public void start() {
         time = new Time();
         manager = new ManagerAgent();
-        warehouse = new WarehouseAgent(productItems);
+        warehouse = new WarehouseAgent(productItems, productTypes);
         Agent.start(time);
         Agent.start(warehouse);
         Agent.start(manager);

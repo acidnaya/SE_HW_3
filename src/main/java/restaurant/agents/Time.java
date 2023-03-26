@@ -1,27 +1,27 @@
-package restaurant.agents;
+package restraunt.agents;
 
 import lombok.Getter;
-import restaurant.Config;
-import restaurant.messages.Message;
+import restraunt.Config;
+import restraunt.Main;
+import restraunt.agents.Agent;
+import restraunt.messages.Message;
 
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * Маховик времени
- * */
-
 public class Time extends Agent {
     public static String now = "";
-    private final DateFormat formatter;
+    private DateFormat formatter;
     @Getter
     private volatile long currentTime;
     private long startTime;
     private long endTime;
     private long realTime;
     private int speed;
+
+    private Thread workingThread;
 
     public Time() {
         formatter = new SimpleDateFormat(Config.format);
@@ -64,6 +64,7 @@ public class Time extends Agent {
         }
         AgentRepository.remove(this);
         AgentRepository.stopAll();
+        Main.restaurant.writeLog();
         stop(this);
     }
 }

@@ -57,7 +57,7 @@ public class ProcessAgent extends Agent {
         for (var i : a) {
             if (i.getID() == dish) {
                 cardNum = i.getCard();
-                var b = Main.restaurant.dishCards;
+                var b = Main.restaurant.getDishCards();
                 for (var j : b) {
                     if (j.getID() == cardNum) {
                         eqID = j.getEquipment();
