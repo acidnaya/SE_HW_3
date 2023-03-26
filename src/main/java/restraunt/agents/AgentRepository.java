@@ -1,5 +1,6 @@
-package restraunt.agent;
+package restraunt.agents;
 
+import lombok.Getter;
 import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 
@@ -12,10 +13,12 @@ import java.util.concurrent.CopyOnWriteArrayList;
 @UtilityClass
 @Slf4j
 public class AgentRepository {
+    @Getter
     private static final List<Agent<?>> AGENTS = new CopyOnWriteArrayList<>();
 
     /**
      * регистрирует нового агента, чтобы другие могли его найти
+     *
      * @param agent регистрируемый агент
      */
     public static synchronized void register(Agent<?> agent) {
@@ -28,6 +31,7 @@ public class AgentRepository {
 
     /**
      * удаляет агента, когда его работа завершена
+     *
      * @param agent удаляемый агент
      */
     public static synchronized void remove(Agent<?> agent) {
@@ -36,8 +40,16 @@ public class AgentRepository {
         log.debug("Agent removed from repository: {}", agent.getName());
     }
 
+    public static synchronized void stopAll() {
+        for (var agent : AGENTS) {
+            agent.stop(agent);
+            log.debug("Agent removed from repository: {}", agent.getName());
+        }
+    }
+
     /**
      * Находит всех агентов искомого типа
+     *
      * @param type тип искомого агента
      * @return список всех рабочих агентов
      */

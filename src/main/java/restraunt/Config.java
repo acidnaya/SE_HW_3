@@ -1,8 +1,6 @@
 package restraunt;
 
-import java.util.Date;
-
-public class Configurations {
+public class Config {
     public static String cardsPath = "inputs/cards.json";
     public static String cooksPath = "inputs/cooks.json";
     public static String dishesPath = "inputs/dishes.json";

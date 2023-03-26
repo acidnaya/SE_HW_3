@@ -1,0 +1,37 @@
+2023-03-26 03:09:48 [Thread-6] ERROR Agent:71 - An error occurred in Agent OrderAgent-0
+java.lang.NullPointerException: Cannot invoke "restraunt.agents.CustomerAgent.registerMessage(restraunt.messages.Message)" because "customer" is null
+	at restraunt.agents.OrderAgent.proceed(OrderAgent.java:34) ~[classes/:?]
+	at restraunt.agents.Agent.run(Agent.java:64) [classes/:?]
+	at java.lang.Thread.run(Thread.java:1589) [?:?]
+2023-03-26 03:09:48 [Thread-8] ERROR Agent:71 - An error occurred in Agent OrderAgent-1
+java.lang.NullPointerException: Cannot invoke "restraunt.agents.CustomerAgent.registerMessage(restraunt.messages.Message)" because "customer" is null
+	at restraunt.agents.OrderAgent.proceed(OrderAgent.java:34) ~[classes/:?]
+	at restraunt.agents.Agent.run(Agent.java:64) [classes/:?]
+	at java.lang.Thread.run(Thread.java:1589) [?:?]
+2023-03-26 03:13:37 [Thread-2] INFO  Agent:68 - Agent CustomerAgent-0 was interrupted
+2023-03-26 03:13:37 [Thread-6] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 03:13:37 [Thread-3] INFO  Agent:68 - Agent CustomerAgent-1 was interrupted
+2023-03-26 03:13:37 [Thread-8] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 03:28:50 [Thread-6] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 03:28:50 [Thread-2] INFO  Agent:68 - Agent CustomerAgent-0 was interrupted
+2023-03-26 03:28:50 [Thread-8] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 03:28:50 [Thread-3] INFO  Agent:68 - Agent CustomerAgent-1 was interrupted
+2023-03-26 03:59:32 [Thread-6] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 03:59:32 [Thread-2] INFO  Agent:68 - Agent CustomerAgent-0 was interrupted
+2023-03-26 03:59:32 [Thread-8] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 03:59:32 [Thread-3] INFO  Agent:68 - Agent CustomerAgent-1 was interrupted
+2023-03-26 04:00:59 [Thread-6] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 04:00:59 [Thread-2] INFO  Agent:68 - Agent CustomerAgent-0 was interrupted
+2023-03-26 04:01:00 [Thread-8] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 04:01:00 [Thread-3] INFO  Agent:68 - Agent CustomerAgent-1 was interrupted
+2023-03-26 04:05:32 [Thread-6] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 04:05:32 [Thread-2] INFO  Agent:68 - Agent CustomerAgent-0 was interrupted
+2023-03-26 04:05:32 [Thread-8] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 04:05:32 [Thread-3] INFO  Agent:68 - Agent CustomerAgent-1 was interrupted
+2023-03-26 04:05:36 [Thread-1] INFO  Agent:68 - Agent ManagerAgent-0 was interrupted
+2023-03-26 04:12:42 [Thread-7] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 04:12:42 [Thread-3] INFO  Agent:68 - Agent CustomerAgent-0 was interrupted
+2023-03-26 04:12:42 [Thread-9] INFO  Agent:68 - Agent OrderAgent-0 was interrupted
+2023-03-26 04:12:42 [Thread-4] INFO  Agent:68 - Agent CustomerAgent-1 was interrupted
+2023-03-26 04:12:46 [Thread-2] INFO  Agent:68 - Agent ManagerAgent-0 was interrupted
+2023-03-26 04:12:46 [Thread-1] INFO  Agent:68 - Agent WarehouseAgent-0 was interrupted

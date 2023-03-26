@@ -1,8 +1,8 @@
 [
   {
-  "prod_type_id": 11,
-  "prod_type_name": "Frozen chicken",
-  "prod_is_food": true
+    "prod_type_id": 11,
+    "prod_type_name": "Frozen chicken",
+    "prod_is_food": true
   },
   {
     "prod_type_id": 18,
@@ -13,17 +13,17 @@
     "prod_type_id": 22,
     "prod_type_name": "Can of cola 0.33",
     "prod_is_food": true
-  } ,
+  },
   {
     "prod_type_id": 23,
     "prod_type_name": "Sugar in sticks",
     "prod_is_food": true
-  } ,
+  },
   {
     "prod_type_id": 24,
     "prod_type_name": "Drinking water",
     "prod_is_food": true
-  } ,
+  },
   {
     "prod_type_id": 12,
     "prod_type_name": "Paper cup 0.2",

@@ -1,14 +1,14 @@
-package restraunt;
+package restraunt.agents;
 
 import lombok.Getter;
-import restraunt.agent.Agent;
-import restraunt.agent.Message;
+import restraunt.Config;
+import restraunt.agents.Agent;
+import restraunt.messages.Message;
 
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.TimeZone;
 
 public class Time extends Agent {
     public DateFormat formatter;
@@ -22,26 +22,26 @@ public class Time extends Agent {
     private Thread workingThread;
 
     public Time() {
-//        formatter = new SimpleDateFormat("HH:mm:ss.SSS");
-//        formatter.setTimeZone(TimeZone.getTimeZone(Configurations.timezone));
-//        String DEFAULT_PATTERN = "yyyy-MM-dd'T'HH:mm:ss";
-        formatter = new SimpleDateFormat(Configurations.format);
+        formatter = new SimpleDateFormat(Config.format);
         try {
-            currentTime = formatter.parse(Configurations.startTime).getTime();
-            startTime = formatter.parse(Configurations.startTime).getTime();
-            endTime = formatter.parse(Configurations.endTime).getTime();
+            currentTime = formatter.parse(Config.startTime).getTime();
+            startTime = formatter.parse(Config.startTime).getTime();
+            endTime = formatter.parse(Config.endTime).getTime();
         } catch (ParseException e) {
             currentTime = 0;
             startTime = 0;
             endTime = 0;
         }
         realTime = new Date().getTime();
-        speed = Configurations.speed;
+        speed = Config.speed;
     }
 
-    public boolean isTimeToAct(long agentTime) { // мб кэширует дебил???
-        // System.out.println("<><><>: " + Main.restaurant.time.timeToString(currentTime));
+    public boolean isTimeToAct(long agentTime) {
         return currentTime > agentTime;
+    }
+
+    public Date getCurrentDate() throws ParseException {
+        return formatter.parse(timeToString(currentTime));
     }
 
     public String timeToString(long t) {
@@ -59,5 +59,7 @@ public class Time extends Agent {
             var time = new Date().getTime();
             currentTime = startTime + (time - realTime) * speed;
         }
+        AgentRepository.remove(this);
+        AgentRepository.stopAll();
     }
 }

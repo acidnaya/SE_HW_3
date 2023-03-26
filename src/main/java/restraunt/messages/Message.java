@@ -1,4 +1,4 @@
-package restraunt.agent;
+package restraunt.messages;
 
 import lombok.Getter;
 

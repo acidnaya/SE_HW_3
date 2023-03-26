@@ -1,7 +1,8 @@
-package restraunt.agent;
+package restraunt.agents;
 
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
+import restraunt.messages.Message;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -39,12 +40,14 @@ public abstract class Agent<MessageType extends Message> implements Runnable {
 
     /**
      * переопределяем в конкретных агентах этот метод, программируя их поведение
+     *
      * @param message обрабатываемое сообщение
      */
     abstract protected void proceed(MessageType message) throws Exception;
 
     /**
      * Передает сообщение агенту
+     *
      * @param message сообщение для агента
      */
     public void registerMessage(MessageType message) {

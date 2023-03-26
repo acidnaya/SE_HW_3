@@ -1,11 +1,9 @@
-package restraunt.resources;
+package restraunt.agents;
 
 import lombok.AllArgsConstructor;
-import restraunt.Customer;
+import restraunt.messages.*;
+import restraunt.resources.basic.Customer;
 import restraunt.Main;
-import restraunt.agent.Agent;
-import restraunt.agent.Message;
-import restraunt.agent.OrderMessage;
 
 @AllArgsConstructor
 public class CustomerAgent extends Agent {
@@ -13,7 +11,11 @@ public class CustomerAgent extends Agent {
 
     @Override
     protected void proceed(Message message) throws Exception {
-
+        if (message instanceof EndMessage m) {
+            cust.setEnded(Main.restaurant.time.getCurrentDate());
+            System.out.println(getName() + " received his order at " + cust.getEnded());
+            stop(this);
+        }
     }
 
     @Override
@@ -22,9 +24,10 @@ public class CustomerAgent extends Agent {
         while (true) {
             if (Main.restaurant.time.isTimeToAct(t)) {
                 System.out.println("---Customer register order---");
-                Main.restaurant.getManager().registerMessage(new OrderMessage(cust.getOrder()));
+                Main.restaurant.getManager().registerMessage(new OrderMessage(this, cust.getOrder()));
                 break;
             }
         }
+        super.run();
     }
 }
