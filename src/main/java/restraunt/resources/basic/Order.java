@@ -1,4 +1,4 @@
-package restraunt;
+package restraunt.resources.basic;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
