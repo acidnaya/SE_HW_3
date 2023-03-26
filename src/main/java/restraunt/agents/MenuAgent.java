@@ -10,9 +10,6 @@ import java.util.List;
 @AllArgsConstructor
 public class MenuAgent extends Agent {
 
-    private List<DishCard> cards;
-    private List<MenuDish> dishes;
-
     @Override
     protected void proceed(Message message) throws Exception {
 

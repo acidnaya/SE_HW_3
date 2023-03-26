@@ -113,7 +113,7 @@ public class RestaurantSimulation {
     public void start() {
         time = new Time();
         manager = new ManagerAgent();
-        warehouse = new WarehouseAgent(productItems, productTypes);
+        warehouse = new WarehouseAgent(productItems);
         Agent.start(time);
         Agent.start(warehouse);
         Agent.start(manager);

@@ -2,9 +2,10 @@ package restraunt.messages;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import restraunt.resources.basic.Order;
 
-import java.util.List;
+/**
+ * Сообщение для резервирования
+ * */
 
 @AllArgsConstructor
 @Getter

@@ -21,8 +21,7 @@ public class ProcessAgent extends Agent {
 
     Process proc = new Process();
 
-    List<KitchenOperation> operations; // список операций из дишкард -
-    // их надо кинуть в кукАгент - он раскидывает их по свободным поварам (непонятно как мы чекаем свободность повара)
+    List<KitchenOperation> operations;
 
     public synchronized void increaseReadyCounter() {
         ready += 1;
@@ -59,6 +58,7 @@ public class ProcessAgent extends Agent {
                 for (var j : b) {
                     if (j.getID() == cardNum) {
                         eqID = j.getEquipment();
+                        log.info("Order will be ready in about " + j.getTime());
                         operations = j.getOperations();
                         break;
                     }

@@ -7,6 +7,10 @@ import restraunt.messages.Message;
 import restraunt.resources.additional.*;
 import restraunt.resources.basic.*;
 
+/**
+ * Агент операции
+ */
+
 @AllArgsConstructor
 @Slf4j
 public class OperationAgent extends Agent {

@@ -10,6 +10,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * Маховик времени
+ * */
+
 public class Time extends Agent {
     public static String now = "";
     private DateFormat formatter;

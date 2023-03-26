@@ -2,10 +2,12 @@ package restraunt.resources.basic;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.extern.jackson.Jacksonized;
 import restraunt.Config;
-import restraunt.resources.basic.Order;
 
 import java.util.Date;
 import java.util.List;

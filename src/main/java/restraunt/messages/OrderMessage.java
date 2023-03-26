@@ -7,6 +7,9 @@ import restraunt.resources.basic.Order;
 
 import java.util.List;
 
+/**
+ * Сообщение с заказом
+ */
 @AllArgsConstructor
 @Getter
 public class OrderMessage extends Message {

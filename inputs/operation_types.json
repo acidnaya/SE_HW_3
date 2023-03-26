@@ -6,5 +6,9 @@
   {
     "oper_type_id": 17,
     "oper_type_name": "pouring boiled water into a paper cup"
+  },
+  {
+    "oper_type_id": 18,
+    "oper_type_name": "bulbulbul"
   }
 ]

@@ -1,12 +1,14 @@
 package restraunt.agents;
 
 import restraunt.Main;
-import restraunt.messages.*;
-import restraunt.resources.basic.*;
+import restraunt.messages.EndMessage;
+import restraunt.messages.Message;
+import restraunt.messages.ReserveMessage;
+import restraunt.messages.TimeMessage;
+import restraunt.resources.basic.Order;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class OrderAgent extends Agent {
     CustomerAgent customer;

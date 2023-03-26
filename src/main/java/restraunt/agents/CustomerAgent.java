@@ -16,7 +16,7 @@ public class CustomerAgent extends Agent {
         if (message instanceof EndMessage m) {
             customer.setEnded(Main.restaurant.time.getCurrentDate());
             System.out.println(getName() + " received his order at " + customer.getEnded());
-            stop(this);
+           // stop(this);
         }
     }
 
